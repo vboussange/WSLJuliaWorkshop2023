@@ -138,6 +138,16 @@ Constructing a benchmark of PiecewiseInference.jl against ApproxBayes.jl and Tur
 ### Project 3
 Marine ecosystem time series modelling.
 
+## Glaciology track
+
+### Shallow ice model in 1D
+Time scales, hysteresis. Real topo.
+
+### Subglacial water routing
+Yesterday and today (Fischer paper)?
+
+### Ice thickness estimation
+PoG exercise
 
 # Additional resources
 - Julia official list of tutorials: https://julialang.org/learning/tutorials/
