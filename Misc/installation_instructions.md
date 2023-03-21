@@ -1,7 +1,11 @@
 # Installation instructions
 
+Although you can download Julia binaries on the [official Julia website](https://julialang.org), we strongy recommend using [juliaup](https://github.com/JuliaLang/juliaup) to install Julia. `juliaup` is a cross-platform installer for the Julia programming language, that allows to manage different Julia version, and e.g. update the Julia version when the installed version is outdated. 
+
+As an integrated development environment (IDE, e.g. RStudio for the R language), we recommend using Visual Studio Code. You'll find installation instructions below for different platforms.
+
 ## Installing Julia with `juliaup`
-We strongy recommend using [juliaup](https://github.com/JuliaLang/juliaup) to install Julia.
+The following will launch a script that installs `juliaup` on your machine, and subsequently install the latest version of Julia.
 
 ### Windows
 
@@ -13,7 +17,7 @@ winget install julia -s msstore
 
 in a command line.
 
-If the Windows Store is blocked on a system, we have an alternative [MSIX App Installer](https://learn.microsoft.com/en-us/windows/msix/app-installer/app-installer-file-overview) based setup. Note that this is currently experimental, please report back successes and failures [here](https://github.com/JuliaLang/juliaup/issues/343). To use the App Installer version, download [this](https://install.julialang.org/Julia.appinstaller) file and open it by double clicking on it.
+If the Windows Store is blocked on a system, an alternative using an [MSIX App Installer](https://learn.microsoft.com/en-us/windows/msix/app-installer/app-installer-file-overview) based setup. Note that this is currently experimental, please report back successes and failures [here](https://github.com/JuliaLang/juliaup/issues/343). To use the App Installer version, download [this](https://install.julialang.org/Julia.appinstaller) file and open it by double clicking on it.
 
 ### MacOS and Linux
 
@@ -27,11 +31,14 @@ in a shell.
 
 ### Mac and `brew`
 
-An alternative on MacOS is to use the `brew` manager, if you have it already installed
+An alternative on MacOS is to use the `brew` manager, if you have it already installed:
 
 ```
 brew install juliaup
 ```
+
+### `juliaup` failing?
+Just use the [binaries](https://julialang.org/downloads/) from the official Julia website.
 
 ## Installing VS Code
 
