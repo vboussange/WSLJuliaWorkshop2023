@@ -59,7 +59,7 @@ know where that is)
 
 - 🎤 💻 **session/talk (interactive)** A practical guideline on how to work with Julia (Victor) **11:30-12:00**
   - julia installation
-  - Pkg management
+  - Pkg management and environments
   - editors (vscode integration)
 
 - 💻 **Exercises** Prepare some exercises (@Mauro)
