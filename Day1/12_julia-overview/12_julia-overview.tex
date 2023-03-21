@@ -112,7 +112,7 @@ plot(sol, vars=(1,2,3)) # plot Lorenz attractor
 
 \begin{frame}[label={sec:orgf4971a5}]{Julia in brief}
       \footnotesize
-\begin{block}{Julia 1.0 was released in 2018, current version is 1.7}
+\begin{block}{Julia 1.0 was released in 2018, current version is 1.8}
 \end{block}
 
 \begin{block}{Features}
@@ -243,18 +243,20 @@ stuff)
 \begin{frame}[fragile,label={sec:org8723e64}]{The good: nice syntax,
     cool features}
   \footnotesize
-Examples:\\[4mm]
+Examples:\\[2mm]
 
 Compact function definition and unicode:
 \begin{minted}[mathescape=true,linenos=false,numbersep=5pt,frame=lines,framesep=2mm]{julia}
-ϕ(t) = sin(2π * t)
+ϕ(t) = sin(2π * t)\\[1mm]
 \end{minted}
 
+\pause
 Vectorized function application:
 \begin{minted}[mathescape=true,linenos=false,numbersep=5pt,frame=lines,framesep=2mm]{julia}
 ϕ.([1,2,3]) .+ [4,5,6]
 \end{minted}
-(note, this gets fused into one loop, no temporary arrays are created)
+(note, this gets fused into one loop, no temporary arrays are created)\\[1mm]
+\pause
 
 Parametric types
 \begin{minted}[mathescape=true,linenos=false,numbersep=5pt,frame=lines,framesep=2mm]{julia}
@@ -360,7 +362,7 @@ Unitful.jl and Measurements.jl
   \footnotesize
  \begin{itemize}
 \item Good interoperability with other languages: \texttt{ccall} (C, Fortran),
-\texttt{Cxx.jl}, \texttt{PyCall.jl}, \texttt{RCall.jl}, \texttt{MATLAB.jl}, etc.
+\texttt{Cxx.jl}, \texttt{PythonCall.jl}, \texttt{RCall.jl}, \texttt{MATLAB.jl}, etc.
 \end{itemize}
 
 \begin{minted}[mathescape=true,linenos=false,numbersep=5pt,frame=lines,framesep=2mm]{julia}
@@ -517,37 +519,17 @@ the associated safety features.
 \begin{frame}[label={sec:orgd4030d7}]{The ugly}
   \footnotesize
 \begin{itemize}
-\item Compilation times can be very long.  E.g. time to first plot can
+\item \large Compilation times can be very long.  E.g. time to first plot can
 20s+ (but fast afterwards)
 \begin{itemize}
 \item in general there are improvements from Julia version to version
   but it is still far from satisfying
+\item apparently Julia 1.9, coming out in the next few weeks, should
+  improve significantly on that again
 \end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Try Julia yourself!}
-  \footnotesize
-\textbf{Try it out yourself} at \url{http://wsl.glads.net}, a JupyterHub
-instance running just for you just for today.\\
-
-Login with any letter of the alphabet and a password of your
-choosing.\\
-If it doesn't work that letter is already taken by someone else; just try another
-letter.\\[3mm]
-
-\pause
-There are two notebooks:
-\begin{itemize}
-\item one containing the code of this presentation
-\item one with a very brief intro to Julia (and Jupyter) which I
-    used in class before
-\item you can also make one yourself or try out the REPL (start a terminal)
-\end{itemize}
-
-\pause
-  I will shutdown the server today by 17h!
-\end{frame}
 
 
 \begin{frame}[label={sec:orge9a7aab}]{Conclusions}
@@ -561,19 +543,10 @@ There are two notebooks:
 \item solves the two language problem \& blurs lines between devs and users
 \end{itemize}
 \vspace{5mm}
-
-I would be happy to see more Julia adoption at WSL
-\begin{itemize}
-\item I could hold intro presentations \& tutorials
---> let me know if you come across someone interested
-\item happy to help with any questions
-\item if there is interest, there is great expertise in my group on
-  GPU computing
-\end{itemize}
-\vspace{5mm}
-
 \pause
-\textbf{Try it out yourself @} \url{wsl.glads.net}
+
+Let's get started then!
+
 \end{frame}
 \end{document}
 %%% Local Variables:
