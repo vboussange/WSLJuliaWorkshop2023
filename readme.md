@@ -36,8 +36,7 @@ notebook(dir="notebooks/")
 ```
 
 # Program
-## Day 1
-**Goals** Introduction to the Language, hands on exercises
+## Day 1: Introduction to the Language, hands on exercises
 
 **8:50** Arrival at Englersaal, WSL (ask at the reception if you don't
 know where that is)
@@ -100,8 +99,7 @@ know where that is)
 
 ### 🍻 Apéro
 
-## Day 2
-**Goal** Project-oriented day
+## Day 2: Project-oriented day
 
 The goal of this second-day workshop is to provide participants with an opportunity to deepen their knowledge of the Julia programming language through biodiversity and glaciology-related projects.
 
