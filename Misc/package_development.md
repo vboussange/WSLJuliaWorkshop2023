@@ -1,0 +1,4 @@
+- use Revise
+- use `TestEnv` to interactively run your test files
+- optimizing code: 
+  - [here are some resources](https://techytok.com/code-optimisation-in-julia/)
