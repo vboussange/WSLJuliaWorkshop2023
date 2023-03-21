@@ -1,34 +1,50 @@
-# Hyper parameter optimization of a machine learning-based SDM
+# Benchmarking PiecewiseInference.jl against ApproxBayes.jl and Turing.jl
 
 ## Project description and objectives
+Mechanistic ecosystem models have the potential to predict the response of ecosystems to global change by simulating the underlying biological and physical processes. However, their predictive power is often limited due to issues with parameter estimation and model inaccuracies, which are challenging to overcome. Inverse modelling techniques can improve parameter estimation and model selection, but they are often computationally expensive and challenging to apply to ecosystem models. Here, we propose a project to benchmark a recent inverse modelling machine learning framework, PiecewiseInference.jl, against two more standard approaches, ApproxBayes.jl and Turing.jl, for ecosystem modelling. The outcome of this project will be integrated in the PiecewiseInference.jl documenation. By contributing to the documentation of PiecewiseInference.jl, this project provides a great opportunity to learn how to contribute to an open-source package while gaining experience in using Julia packages for modeling and data analysis in biodiversity and earth sciences. 
 
-#### Project Objectives
-The goal of the project is to compare the performance of PiecewiseInference.jl against the two popular libraries, ApproxBayes.jl and Turing.jl, in fitting a 3-species ecosystem model using time-series data. The benchmark will help evaluate the strengths and weaknesse
+### Project Objectives
+The objective of the project is to benchmark the performance of PiecewiseInference.jl against two standard approaches, ApproxBayes.jl and Turing.jl, for fitting mechanistic models to ecological time series. The participants will use a simple 3 species ecosystem model to generate time series with different noise levels and compare the accuracy and computational time of the methods. The project aims to provide insights into the performance of different methods for fitting mechanistic models to ecological time series and contribute to the development and improvement of PiecewiseInference.jl for better calibration of mechanistic ecosystem models against empirical systems and data.
 
-#### Methodology
+### Methodology
 
+#### Get to know the required packages
+Install the required packages
+- ApproxBayes.jl: A package for approximate Bayesian computation.
+- Turing.jl: A package for Bayesian computation.
+- EcoEvoModelZoo.jl: A package containing various ecological models that can be used for teaching and research.
+- PiecewiseInference.jl: A machine learning framework for inverse ecosystem modelling.
 
-## Useful information
+PiecewiseInference and EcoEvoModelZoo are unregistered packages - check out their github repository to understand how to install it.
 
-- [A cool Julia tutorial on approximate Bayesian computation with ApproxBayes.jl](https://vboussange.github.io/post/abc_inference/). Can be used as a basis for using xxx
+Rapidly scan through the following tutorials, that provide hands-on explanations on how to use each of the inverse modelling packages
+- [A cool Julia tutorial on approximate Bayesian computation with ApproxBayes.jl](https://vboussange.github.io/post/abc_inference/).
 - [A cool Julia tutorial on Bayesian inference with Turing.jl](https://turinglang.org/v0.24/tutorials/10-bayesian-differential-equations/).
+- A cool Julia tutorial on how to use PiecewiseInference with a 5 species ecosystem model.
 
-### How to choose neural network architecture
 
-## Getting started
+#### Generate time series data and functions to evaluate the three methods
 
-### Data cleaning
+Participants should create a function that generates time series data using the 3 species ecosystem model with different noise levels. This method should involve the "simulate" function from ParametricModels.jl. Note that noise can be generated with the followign snippet:
 
-### Some useful chunks of code
+```julia
+noise_level = 0.1
+data_with_noise = data .+ noise_level * randn(size(data))
+```
 
-#### MLP function generator
+Participants should then write three different function, `approxBayes_fit`, `turing_fit`, and `piecewise_inference_fit`, which take as arguments a model and a dataset and return the model parameters inferred with the corresponding method. Those functions should ideally be tested in a separate test file, in a setting with no noise to make sure that they work.
 
-## Grid search
+#### Evaluate the methods
 
-## Hyperparameter optimization
 
-## Going further
+To evaluate the three different methods, participants are invited to use different criteria for assessing the performance of each method. The following criteria are recommended: 
+1. Accuracy: Participants should evaluate the accuracy of each method in estimating the parameter values of the 3-species ecosystem model. This can be done by comparing the estimated parameter values with the true parameter values used to generate the simulated data. 
+2. Goodness of fit: Participants should evaluate the goodness of fit of each method by comparing the model outputs generated by the estimated parameter values with the observed data. This can be done by calculating metrics such as root mean squared error (RMSE), mean absolute error (MAE), coefficient of determination (R²), and Akaike Information Criterion (AIC). Participants should also visually compare the model outputs with the observed data using plots. This criterion will help participants assess the ability of each method to capture the observed patterns in the data and make reliable predictions.
+3. Precision: Participants should evaluate the precision of each method in estimating the parameter values of the 3-species ecosystem model. This can be done by calculating the variance of the estimated parameter values across multiple runs of each method. 
+4. Efficiency: Participants should evaluate the efficiency of each method in terms of computational time and memory usage. This can be done by measuring the time and memory required for each method to estimate the parameter values of the 3-species ecosystem model for different data sizes and levels of noise. 
+5. Robustness: Participants should evaluate the robustness of each method to different types of noise and data incompleteness. This can be done by simulating different types of noise (e.g., measurement error, sampling error) and data incompleteness (e.g., missing data points) and comparing the performance of each method under these conditions. 
+6. Ease of use: Participants should evaluate the ease of use of each method in terms of code complexity and user-friendliness. This can be done by comparing the complexity of the code required to implement each method and the user-friendliness of the associated software packages.
 
-Can you spot differences in architectures when trying to predict species communities?
 
-## Acknowledgement
+#### Document the results and create a pull request in PiecewiseInference
+Document the results and create a pull request in PiecewiseInference: After completing the project, participants are expected to document their results and create a pull request in the PiecewiseInference.jl repository. The pull request should include the benchmark results, including the code used to generate the results and a brief summary of the findings. The documentation should be clear and easy to understand, with appropriate figures and tables to illustrate the results. The results will be reviewed by the developers of PiecewiseInference.jl and, if deemed appropriate, integrated into the documentation of the package. This is a great opportunity for participants to contribute to an open source project and showcase their skills to the broader scientific community.
