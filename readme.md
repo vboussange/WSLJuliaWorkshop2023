@@ -8,7 +8,7 @@ The repository is organized by days and sessions. Please refer to the [Program](
 
 # Requirements
 
-To follow the workshop materials, you need to have the following software installed on your computer:
+To follow the workshop materials, you need to have the following softwares installed on your computer:
 - Julia 
 - Jupyter
 
