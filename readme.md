@@ -134,7 +134,7 @@ The goal of this second-day workshop is to provide participants with an opportun
 
 ### Constructing a benchmark of PiecewiseInference.jl against ApproxBayes.jl and Turing.jl
 
-### Marine ecosystem time series modelling.
+### Marine ecosystem time series modelling
 
 ## Glaciology track
 
@@ -157,10 +157,7 @@ PoG exercise
 The workshop materials are based on the following resources:
 
 - [List of references or sources of inspiration]
-# License
-
-The workshop materials are released under the [license type] license. See the LICENSE file for more details.
 
 # Contact
 
-If you have any questions or feedback, feel free to contact the workshop organizers at [contact email or website].
+If you have any questions or feedback, feel free to contact the contributors @vboussange and @mauro3.
