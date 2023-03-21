@@ -1,25 +1,47 @@
-# Hyper parameter optimization of a machine learning-based SDM
+# Hyper parameter optimization of a machine learning-based Species Distribution Model
 
 ## Project description and objectives
-Species distribution modeling (SDM) is a widely used method in biodiversity and earth sciences that predicts the distribution of a species in a given area based on environmental variables such as temperature, precipitation, and vegetation cover. Machine learning algorithms such as neural networks have shown great potential in building accurate SDMs. However, choosing the right hyperparameters for these models is crucial for their performance.
+A Species Distribution Model (SDM) is a type of predictive modeling approach used in ecology and conservation biology to understand and predict the distribution of species in a particular geographic area. SDMs use statistical or machine learning methods to relate the occurrence or abundance of a species to environmental variables, such as temperature, precipitation, elevation, and land use. The model can then be used to predict the distribution of the species across the landscape, even in areas where the species has not been observed. SDMs are useful for understanding the factors that determine the distribution of species and for predicting how changes in the environment may impact the distribution of species in the future. Machine learning algorithms such as neural networks have shown great potential in building accurate SDMs. However, choosing the right hyperparameters for these models is crucial for their performance.
 
-#### Project Objective
-The objective of this project is to build a species distribution model using a fully connected neural network and explore different neural network architectures. The participants may follow two approaches, namely grid search and hyperparameter Bayesian optimization, to optimize the hyperparameters of the neural network and achieve the best possible model performance.
+### Project Objective
+The objective of this project is to build a species distribution model using a fully connected neural network, and fine-tune the neural network architecture, i.e. optimize the neural network hyperparameters. Different hyperparameter optimization strategies will be explored, including grid search and bayesian hyperparameter optimization. Further objectives may include feature selection, and constructing more elaborate models that can predict species communities.
 
-#### Methodology
+### Methodology
 The project can be divided into the following steps:
 
-- **Data preparation** The first step is to gather the data required to build the SDM. The dataset should include information about the presence or absence of a species and environmental variables such as temperature, precipitation, and vegetation cover. The dataset should also be split into training and testing datasets.
+#### Data preparation
 
-- **Building the neural network** The next step is to build a fully connected neural network model using the Julia programming language. The neural network should include an input layer, one or more hidden layers, and an output layer. The participants should experiment with different architectures, including varying the number of hidden layers, neurons per layer, and activation functions.
+The first step is to gather the data required to build the SDM. The dataset should include information about the presence or absence of a species and environmental variables such as temperature, precipitation, and vegetation cover. The data should then be divided into training, validation, and testing sets. The ratio of data in each set should be decided based on the size of the dataset, but typically the training set should be larger than the validation and testing sets. It is important to ensure that the data in each set is representative of the overall dataset.
 
-- **Hyperparameter optimization** The participants can follow two approaches to optimize the hyperparameters of the neural network:
-    - **a. Grid search** The participants can perform a grid search to find the optimal hyperparameters for the neural network. The grid search involves defining a range of values for each hyperparameter and training the neural network for every combination of hyperparameters. The optimal hyper xxx
-    - **b. Bayesian hyperparameter optimization**: Participants are invited to use [Hyperopt.jl](https://github.com/baggepinnen/Hyperopt.jl).
+
+#### Building the neural network 
+The next step is to build a fully connected neural network model using the Julia programming language. The neural network should include an input layer, one or more hidden layers, and an output layer. The participants should experiment with different architectures, including varying the number of hidden layers, neurons per layer, and activation functions.
+
+#### Hyperparameter optimization
+
+Hyperparameters of a neural network model are parameters that are not learned during training but are set by the user before training. The hyperparameters define the structure and behavior of the neural network and influence how the model learns from the input data. Some common hyperparameters of a neural network model include:
+
+- Number of hidden layers: This defines the number of layers between the input and output layers of the neural network.
+Number of neurons in each hidden layer: This defines the number of nodes or neurons in each hidden layer of the neural network.
+
+- Activation function: This defines the mathematical function used to transform the output of each neuron in the neural network.
+
+- Learning rate: This defines the step size or the rate at which the model updates the weights during training.
+
+- Dropout rate: This defines the fraction of neurons in the neural network that are randomly dropped out during training to prevent overfitting.
+
+Optimizing these hyperparameters can significantly improve the performance of the neural network and the accuracy of the model predictions. 
+The participants can follow two approaches to optimize the hyperparameters of the neural network:
+
+  - **a. Grid search** Grid search involves defining a grid of hyperparameters and evaluating the performance of the model for each combination of hyperparameters. The best combination of hyperparameters is selected based on the performance on the validation set. Participants should define a range of values for each hyperparameter and generate a grid of all possible combinations. The performance of the model should then be evaluated for each combination of hyperparameters. Participants should choose the combination of hyperparameters that gives the best performance on the validation set.
+
+  - **b. Bayesian hyperparameter optimization** Bayesian optimization is a more sophisticated method that uses probabilistic models to explore the hyperparameter space efficiently. Bayesian optimization builds a probabilistic model of the objective function (in this case, the performance of the SDM on the validation set) and uses it to select the next set of hyperparameters to evaluate. Participants should define a prior distribution for each hyperparameter and use it to initialize a probabilistic model. The model should be updated iteratively by evaluating the performance of the model for different hyperparameter combinations. The next set of hyperparameters to evaluate should be selected based on the model's prediction of the best combination of hyperparameters. The optimization process should continue until a satisfactory performance is achieved. Participants are invited to use [Hyperopt.jl](https://github.com/baggepinnen/Hyperopt.jl).
 
 ## Useful information
 
-### How to choose neural network architecture
+- [A Conceptual Explanation of Bayesian Hyperparameter Optimization for Machine Learning](https://towardsdatascience.com/a-conceptual-explanation-of-bayesian-model-based-hyperparameter-optimization-for-machine-learning-b8172278050f)
+
+### Some tips on how to choose a neural network architecture
 
 - Start with a simple network: Start with a small number of neurons and layers, and gradually increase the complexity of the network if necessary. A simpler network is easier to train and less likely to overfit the training data. 
 - Use a pre-existing architecture: Use a pre-existing architecture that has been proven to work well for similar problems. This can save time and ensure that the network architecture is appropriate for the problem. 
