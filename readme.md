@@ -1,6 +1,6 @@
 # Practical introduction to Julia for modelling and data analysis in biodiversity and earth sciences
 
-This repository contains materials for the [WSL Julia Workshop 2023](https://www.wsl.ch/de/ueber-die-wsl/die-wsl-im-dialog/details/practical-introduction-to-julia-for-modelling-and-data-analysis-in-biodiversity-and-earth-sciences.html) **Practical introduction to Julia for modelling and data analysis in biodiversity and earth sciences**, held on the 24th and 27th of March 2023 at WSL Birmensdorf. 
+This repository contains materials for the [WSL Julia Workshop 2023](https://www.wsl.ch/de/ueber-die-wsl/die-wsl-im-dialog/details/practical-introduction-to-julia-for-modelling-and-data-analysis-in-biodiversity-and-earth-sciences.html) **Practical introduction to Julia for modelling and data analysis in biodiversity and earth sciences**, held on the 24th and 27th of March 2023 at WSL Birmensdorf.
 
 # Content
 
@@ -9,10 +9,10 @@ The repository is organized by days and sessions. Please refer to the [Program](
 # Requirements
 
 To follow the workshop materials, you need to have the following software installed on your computer:
-- Julia 
+- Julia
 - Jupyter
 
-Additionally, we recommend to use 
+Additionally, we recommend to use
 - VSCode
 
 as an IDE, together with the Julia extension.
@@ -37,13 +37,16 @@ notebook(dir="notebooks/")
 
 # Program
 ## Day 1
-**Goals** Introduction to the Language, hands on exercises 
+**Goals** Introduction to the Language, hands on exercises
+
+**8:50** Arrival at Englersaal, WSL (ask at the reception if you don't
+know where that is)
 
 ### Morning session 1
 **9:00 - 10:30**
 
-- 🎤 Welcome and Introduction to the Workshop + language (@Mauro and @Victor) **9:00-9:10** 
-- 🎤 Overview of the Julia programming language (@Mauro) **9:10-9:30** 
+- 🎤 Welcome and Introduction to the Workshop + language (@Mauro and @Victor) **9:00-9:10**
+- 🎤 Overview of the Julia programming language (@Mauro) **9:10-9:30**
 - 💻 Jupyter hub practical (@Mauro) **9:30-10:30**
   - **Practical** Basic syntax and data types
   - **Practical** Control flow and conditional statements
@@ -53,15 +56,15 @@ notebook(dir="notebooks/")
  -->
 ### Morning session 2
 **11-12:30**
-- 🎤 **Experience** Why I like Julia (@Victor) **11:00-11:30** 
+- 🎤 **Experience** Why I like Julia (@Victor) **11:00-11:30**
 
 - 🎤 💻 **session/talk (interactive)** A practical guideline on how to work with Julia (Victor) **11:30-12:00**
   - julia installation
   - Pkg management
   - editors (vscode integration)
 
-- 💻 **Exercises** Prepare some exercises (@Mauro) 
-  
+- 💻 **Exercises** Prepare some exercises (@Mauro)
+
 - 💻 **Additional exercises**
 
 ### Lunch
@@ -71,12 +74,12 @@ notebook(dir="notebooks/")
 **13:30 - 15:00**
 
 - 🎤 **Talk** Overview of the ecosystem (@Mauro) **13:30-14:00**
-  - the Julia discourse, 
-  - the packages we like best, 
+  - the Julia discourse,
+  - the packages we like best,
 
 - 🎤 💻 **Interactive talk** Arrays, dataframes, loading (@Victor) **14:00-14:15**
-  - indexing and slicing, 
-  - matrix operations, and 
+  - indexing and slicing,
+  - matrix operations, and
   - broadcasting
   - Importing CSV
 
@@ -94,7 +97,7 @@ notebook(dir="notebooks/")
 - 🧵 **Wrap-up and discussion** **16:30-17:00**
 
 
-  
+
 ### 🍻 Apéro
 
 ## Day 2
