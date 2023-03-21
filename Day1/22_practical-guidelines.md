@@ -1,3 +1,15 @@
+# A practical guideline on how to work with Julia 
+
+This session is about providing you with a nice workflow to get started with a Julia project.
+
+## Folder structure
+
+- `code`
+- `data`
+- some shell script to run julia
+
+## How to run a julia file on the server
+
 ## Packages Management
 
 Julia has a built-in package manager called `Pkg` which can be used to install and manage packages. 
@@ -75,3 +87,15 @@ Julia has good integration with various editors, including VSCode, Atom, Juno, a
 using IJulia
 notebook()
 ```
+
+## Remote Development using SSH
+The Visual Studio Code Remote - SSH extension allows you to open a remote folder on any remote machine, virtual machine, or container with a running SSH server and take full advantage of VS Code's feature set. Once connected to a server, you can interact with files and folders anywhere on the remote filesystem.
+
+No source code needs to be on your local machine to gain these benefits since the extension runs commands and other extensions directly on the remote machine.
+![](https://code.visualstudio.com/assets/docs/remote/ssh/architecture-ssh.png)
+
+### Getting started
+
+- [Here are guidelines to proceed](https://code.visualstudio.com/docs/remote/ssh)
+Install the Remote-SSH extension. If you plan to work with other remote extensions in VS Code, you may choose to install the Remote Development extension pack.
+
