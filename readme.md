@@ -55,14 +55,14 @@ know where that is)
  -->
 ### Morning session 2
 **11-12:30**
-- 🎤 **Experience** Why I like Julia (@Victor) **11:00-11:30**
+- 🎤 **Experience** [Why I like Julia](Day1/21_why-i-like-julia-VB/21_why-i-like-julia-VB.ipynb) (@Victor) **11:00-11:30**
 
-- 🎤 💻 **session/talk (interactive)** A practical guideline on how to work with Julia (Victor) **11:30-12:00**
+- 🎤 💻 **session/talk (interactive)** [A practical guideline on how to work with Julia](Day1/22_practical-guidelines/22_practical-guidelines.md) (@Victor) **11:30-12:00**
   - julia installation
   - Pkg management and environments
   - editors (vscode integration)
 
-- 💻 **Exercises** (@Mauro and @Victor) 12:00-12:30
+- 💻 **Exercises** (@Mauro) 12:00-12:30
 
 - 💻 **Additional exercises**
 
@@ -76,19 +76,15 @@ know where that is)
   - the Julia discourse,
   - the packages we like best,
 
-- 🎤 💻 **Interactive talk** Arrays, dataframes, loading (@Victor) **14:00-14:15**
-  - indexing and slicing,
-  - matrix operations, and
-  - broadcasting
-  - Importing CSV
+- 🎤 💻 **Interactive talk** [`DataFrames`, broadcasting, loading CSV](Day1/32_dataframe_tuto/32_dataframe_tuto.ipynb) (@Victor) **14:00-14:15**
 
 
 - 🎤 💻 **Interactive talk**  Plotting and visualisation (@Mauro) **14:15-14:30**
 
-- 💻 Hands-on exercises **14:30-15:00**
+- 💻 [Hands-on exercises](Day1/32_dataframe_tuto/33_dataframe_exercises.md) (@Victor) **14:30-15:00**
 
 ### Coffee break
-15:00 - 15:30
+**15:00 - 15:30**
 
 ### Afternoon session 2
 - 🎤 💻 **Interactive talk** Saving and loading data in Julia (Mauro) **14:15-14:30**
@@ -105,36 +101,45 @@ The goal of this second-day workshop is to provide participants with an opportun
 
 ### Morning session 1
 
-- Geo data (@Mauro) 9:00-10:00
+- Geospatial data handling (@Mauro) **9:00-9:30**
   - rasters
   - shapefiles
 
-- Parallel computing (@Victor) 10:00-10:30
+- Parallel computing (@Victor) **9:30-10:00**
   - threads 
   - distributed
 
+
+- Profiling (@Mauro) **10:00-10:30**
+
+
+
 ### Coffee break
+**10:30-11:00**
 
 ### Morning session 2
-- Interface with Python, R, matlab (@Victor) 11:00-11:30
+- Interface with Python, R, matlab (@Victor) **11:00-11:30**
 
-- **Talk** Track Introductions (@Victor and @Mauro) 11:30-12:30
+- **Talk** Track Introductions (@Victor and @Mauro) **11:30-12:30**
   - Biodiversity track
   - Glaciology track
+
+
 ### Lunch
 
 ### Afternoon session 1
-- Project session 13:30-15:00
+- Project session **13:30-15:00**
 
 
 
-### Coffee break 15:00-15:30
+### Coffee break 
+**15:00-15:30**
 
 ### Afternoon session 2 
 
-- Project session 15:30-16:00
-- Participants will share their progress and discuss their experience working on the project. 16:00-16:45
-- Feedback 16:45 - 17:00
+- Project session **15:30-16:00**
+- Participants will share their progress and discuss their experience working on the project. **16:00-16:45**
+- Feedback **16:45 - 17:00**
 
 
 # Projects
