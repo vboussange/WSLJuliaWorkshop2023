@@ -2,3 +2,4 @@
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Downloads = "f43a241f-c20a-4ad4-852c-f6b1247861c6"
+PythonPlot = "274fc56d-3b97-40fa-a1cd-1b4a50311bf9"
