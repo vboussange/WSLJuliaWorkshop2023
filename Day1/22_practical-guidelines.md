@@ -203,4 +203,4 @@ Here's what the script does, step by step:
 
 ## Acknowledgement and resources
 - [Pkg.jl documentation](https://pkgdocs.julialang.org/v1/toml-files/)
-- []()
+- [How to set up a development environment, outside the global (default) environment, together with nice tricks for your `sartup.jl`](https://davidamos.dev/five-minutes-to-julia/)

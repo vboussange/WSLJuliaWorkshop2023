@@ -1,0 +1,3 @@
+- Execute interactively `mlp_mnist.jl` located at https://github.com/FluxML/model-zoo/tree/master/vision/mlp_mnist
+  - Download all the files form the folder
+  - You'll need to activate and instantiate the project
