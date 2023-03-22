@@ -4,7 +4,7 @@ cd(@__DIR__)
 using Pkg; Pkg.activate(".")
 ```
 
-### Level 1: Iris dataset
+### DataFrames and Plotting with the Iris dataset
 
 Download the "iris.csv" file from [here](https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv). Save it in a file `iris_data.csv`
 ```julia
@@ -28,6 +28,11 @@ println(iris_df)
 Print only the "species" column of the DataFrame. 
 ```julia
 println(iris_df[:,[:species]])
+```
+
+Print the first 5 rows in the DataFrame.
+```julia
+println(first(iris_df, 5))
 ```
 
 Print only the rows of the `DataFrame` where the "petal_length" is greater than 5. 
@@ -77,4 +82,77 @@ ax.set_title("Iris traits")
 fig.savefig("iris.pdf", dpi=100)
 ```
 
+### Analyzing GBIF dataset using DataFrames, Broadcasting, and Data Visualization
 
+First, let's load GBIF data.
+```julia
+using GBIF2, DataFrames
+
+species_name = "Milvus milvus"
+df = occurrence_search(; limit=4000, country=:CH, year=(2000,2020)) |> DataFrame
+```
+
+What are the columns of this dataframe? How many rows does it have?
+
+```julia
+println(names(df))
+println("Its size is ", size(df,1))
+```
+
+Group occurrences by canton (`stateProvince`). Print all cantons where the birds where observed.
+```julia
+dfg = groupby(df, "stateProvince")
+cantons = [df.stateProvince[1] for df in dfg]
+```
+
+ Which canton has the most number of occurence?
+
+
+```julia
+
+noccurences = [size(df,1) for df in dfg]
+
+canton_max_oc = cantons[argmax(noccurences)]
+println(canton_max_oc, " is the canton where ", species_name, "has been the most observed")
+```
+
+
+Create a bar chart with `Plots.jl`, that shows the total number of observations for each canton
+
+```julia
+using Plots
+
+# Create a bar chart that shows the total number of observations for each country and decade
+bar( noccurences, xlabel = "Canton", ylabel = "Number of observations", title = "GBIF dataset", legend = :top, xrotation = 45, xticks=(1:length(cantons), cantons))
+
+```
+
+
+Drop the rows where the `decimalLongitude` or `decimalLatitude` is `missing`
+
+```julia
+dropmissing!(df, [:decimalLongitude, :decimalLatitude])
+
+```
+
+Normalize the `decimalLongitude` and `decimalLatitude`, so that it scales between 0 and 1.
+
+For this, construct a function `normalize`, that takes in a vector of floating points and a new normalized vector. This function should use the `.` operator.
+
+```julia
+function normalize(x::AbstractVector)
+    maxx = maximum(x)
+    minx = minimum(x)
+    return (x .- minx) ./(maxx - minx)
+end
+```
+
+```julia
+for col in [:decimalLongitude, :decimalLatitude]
+    df[!, col] .= normalize(df[:, col])
+end
+
+df[:,[:decimalLongitude, :decimalLatitude]]
+```
+
+# 🥳 Congrats! You are done with this session of exercises.
