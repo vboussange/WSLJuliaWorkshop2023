@@ -1,13 +1,6 @@
-# The game of life
 
-The **Game of Life** is a classic cellular automaton invented by John Conway. In this simulation, each cell on a grid can either be alive or dead, and they change states according to a set of rules. The rules are as follows:
-
-- Any live cell with two or three live neighbors survives.
-- Any dead cell with three live neighbors becomes a live cell.
-- All other live cells die in the next generation. Similarly, all other dead cells stay dead.
-
-
-Here is the code in Julia:
+# Solution of the Game of Life
+Here is the code in Julia
 
 ```julia
 # Define the dimensions of the grid
@@ -57,11 +50,12 @@ function update_grid(grid)
 end
 
 # Run the simulation for 50 generations
-for i in 1:50
-    println("Generation $i:")
-    show(grid)
-    grid = update_grid(grid)
-end
+# not so fancy....
+# for i in 1:10
+#     println("Generation $i:")
+#     show(grid)
+#     grid = update_grid(grid)
+# end
 ```
 
 This code will initialize a random grid, count the number of live neighbors for each cell, update the grid according to the rules, and print out the grid for each generation. You can adjust the width, height, and number of generations by changing the values of width, height, and the for loop range, respectively.
@@ -70,20 +64,23 @@ Let's make it fancier with Plots.jl!
 
 ```julia
 using Plots
-# Create a plot of the initial grid
-heatmap(grid, c=:Greys)
 
 # Define a function to update the plot for one generation
 function update_plot(grid)
     grid = update_grid(grid)
-    heatmap(grid, c=:Greys)
+    p = heatmap(grid, 
+                c=:Greys, 
+                legend = :none, 
+                xaxis=false, 
+                yaxis=false, 
+                ticks=false)
+    return grid, p
 end
 
 # Animate the plot for 50 generations
-animation = @animate for i in 1:50
-    update_plot(grid)
+for i in 1:50
+    grid, p = update_plot(grid)
+    sleep(0.1)
+    display(p)
 end
-
-# Display the animation
-gif(animation, "game_of_life.gif", fps = 10)
 ```

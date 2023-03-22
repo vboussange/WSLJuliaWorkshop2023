@@ -25,14 +25,7 @@ Please refer to the [installation instructions](Misc/installation_instructions.m
 To use the workshop materials, clone this repository to your local machine:
 
 ```sh
-git clone https://github.com/[username]/[repository-name].git
-```
-Then, navigate to the cloned repository and start a Julia session. You can run the examples and exercises in the notebooks by opening them in Jupyter or Pluto:
-
-
-```julia
-using IJulia # if you installed Jupyter notebooks
-notebook(dir="notebooks/")
+git clone https://github.com/vboussange/WSLJuliaWorkshop2023.git
 ```
 
 # Program
@@ -44,15 +37,14 @@ know where that is)
 ### Morning session 1
 **9:00 - 10:30**
 
-- 🎤 Welcome and Introduction to the Workshop + language (@Mauro and @Victor) **9:00-9:10**
+- 🎤 Greetings to the Workshop (@Mauro and @Victor) **9:00-9:10**
 - 🎤 Overview of the Julia programming language (@Mauro) **9:10-9:30**
 - 💻 Jupyter hub practical (@Mauro) **9:30-10:30**
   - **Practical** Basic syntax and data types
   - **Practical** Control flow and conditional statements
 ### Coffee break
 **10:30 - 11:00**
-<!-- - **9:30-10:30 Talk** Overview of the Julia Programming Language and Why We Like It
- -->
+
 ### Morning session 2
 **11-12:30**
 - 🎤 **Experience** [Why I like Julia](Day1/21_why-i-like-julia-VB/21_why-i-like-julia-VB.ipynb) (@Victor) **11:00-11:30**
@@ -110,7 +102,7 @@ The goal of this second-day workshop is to provide participants with an opportun
   - distributed
 
 
-- Profiling (@Mauro) **10:00-10:30**
+- Profiling Julia code (@Mauro) **10:00-10:30**
 
 
 
