@@ -62,7 +62,7 @@ know where that is)
   - Pkg management and environments
   - editors (vscode integration)
 
-- 💻 **Exercises** Prepare some exercises (@Mauro)
+- 💻 **Exercises** (@Mauro and @Victor) 12:00-12:30
 
 - 💻 **Additional exercises**
 
@@ -104,27 +104,37 @@ know where that is)
 The goal of this second-day workshop is to provide participants with an opportunity to deepen their knowledge of the Julia programming language through biodiversity and glaciology-related projects.
 
 ### Morning session 1
-- Raster data, shapefiles, etc... (1:00)
+
+- Geo data (@Mauro) 9:00-10:00
+  - rasters
+  - shapefiles
+
+- Parallel computing (@Victor) 10:00-10:30
+  - threads 
+  - distributed
 
 ### Coffee break
 
 ### Morning session 2
-- Interface with Python, R, matlab (30 min)
+- Interface with Python, R, matlab (@Victor) 11:00-11:30
 
-- **Talk** Track Introductions
+- **Talk** Track Introductions (@Victor and @Mauro) 11:30-12:30
   - Biodiversity track
   - Glaciology track
 ### Lunch
 
 ### Afternoon session 1
+- Project session 13:30-15:00
 
 
 
-### Coffee break
+### Coffee break 15:00-15:30
 
-### Afternoon session 2
-- **Q&A**
-- Participants will share their progress and discuss their experience working on the project.
+### Afternoon session 2 
+
+- Project session 15:30-16:00
+- Participants will share their progress and discuss their experience working on the project. 16:00-16:45
+- Feedback 16:45 - 17:00
 
 
 # Projects
