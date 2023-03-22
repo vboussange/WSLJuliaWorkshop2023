@@ -31,12 +31,19 @@ pkg> conda add matplotlib panda
 This creates a CondaPkg.toml file in the active project specifying the dependencies, just like a Project.toml specifies Julia dependencies. Commit this file along with the rest of the project so that dependencies are automatically installed for everyone using it.
 
 ### Getting started with `PythonCall`
-Here's an example of how you can use Pandas and Seaborn to visualize the iris dataset.
 
+Creating a numpy array
 ```julia
 cd(@__DIR__)
 using PythonCall
 # importing Python modules
+np = pyimport("numpy")
+a = np.array([1,2,3])
+```
+
+Here's an example of how you can use Pandas and Seaborn to visualize the iris dataset.
+
+```julia
 pd = pyimport("pandas")
 plt = pyimport("matplotlib.pyplot")
 sns = pyimport("seaborn")
@@ -146,6 +153,15 @@ ret <- f(1, $y)
 """
 ```
 
+```julia
+R"""
+library(ggplot2)
+data(mtcars)
+p <- ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point()
+print(p)
+"""
+```
+
 ## Interfacing with MATLAB
 
 The [MATLAB.jl](https://github.com/juliamatlab/MATLAB.jl) package provides an interface for using MATLAB® from Julia. 
@@ -176,4 +192,4 @@ run(`mv $(filename) $(newfilename)`)
 ```
 
 ### Further resources
-See [the Julia documentation](https://docs.julialang.org/en/v1/manual/running-external-programs/) for more details
+See [the Julia documentation](https://docs.julialang.org/en/v1/manual/running-external-programs/) for more details.
