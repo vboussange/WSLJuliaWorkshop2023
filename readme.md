@@ -110,13 +110,19 @@ The goal of this second-day workshop is to provide participants with an opportun
 - 🎤 💻 Geospatial data handling (@Mauro) **9:00-9:30**
   - rasters
   - shapefiles
+  - Hands-on exercises
 
-- 🎤 💻 Parallel computing (@Victor) **9:30-10:00**
-  - threads 
+- 🎤 💻 Performant Julia code and profiling (@Mauro) **9:30-10:00**
+  - Introduction
+  - Hands-on exercises
+
+
+- 🎤 💻 Parallel computing (@Victor) **10:00-10:30**
+  - threads
   - distributed
+  - exercise with the code of life.
 
 
-- 🎤 💻 Profiling Julia code (@Mauro) **10:00-10:30**
 
 
 
@@ -124,9 +130,11 @@ The goal of this second-day workshop is to provide participants with an opportun
 **10:30-11:00**
 
 ### Morning session 2
-- 🎤 Interface with Python, R, MATLAB (@Victor) **11:00-11:30**
+- 💻 Hands-on exercises **11:00-11:30**
 
-- 🎤 Track Introductions (@Victor and @Mauro) **11:30-12:30**
+- 🎤 Interface with Python, R, MATLAB (@Victor) **11:30-12:00**
+
+- 🎤 Track Introductions (@Victor and @Mauro) **12:00-12:30**
   - Biodiversity track
   - Glaciology track
 
@@ -141,9 +149,10 @@ The goal of this second-day workshop is to provide participants with an opportun
 
 ### Afternoon session 4
 
-- 💻 Project session **15:30-16:00**
-- 🎤 Project presentation **16:00-16:45**
-- 🎤 Feedback **16:45 - 17:00**
+- 🎤 Why I like Julia (@Ivan) **15:30-15:40**
+- 💻 Project session **15:40-16:30**
+
+- 🎤 Wrap-up and feedback **16:30 - 17:00**
 
 
 # Projects
@@ -167,7 +176,7 @@ Yesterday and today (Fischer paper)?
 PoG exercise
 
 # Additional resources
-- Julia official list of tutorials: https://julialang.org/learning/tutorials/
+- [Julia official list of tutorials](https://julialang.org/learning/tutorials/)
 - https://github.com/storopoli/Julia-Workshop, https://www.youtube.com/watch?v=uiQpwMQZBTA, 3 hours
 - https://www.matecdev.com/posts/julia-tutorial-science-engineering.html
 - https://crsl4.github.io/julia-workshop/session1-get-started.html
