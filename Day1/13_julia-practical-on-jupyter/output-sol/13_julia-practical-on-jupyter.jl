@@ -48,7 +48,7 @@ end
 # integrate dx/dt = lorenz(t,x) numerically from t=0 to t=50 and starting point x₀
 tspan = (0.0, 50.0)
 x₀ = [2.0, 0.0, 0.0]
-sol = solve(ODEProblem(lorenz, x₀, tspan), Tsit5())
+sol = solve(ODEProblem(lorenz, x₀, tspan), Tsit5()); # the ; suppresses the output
 
 # Yes, this takes some time... Julia is Just-Ahead-of-Time compiled.  I.e. Julia is compiling.
 
