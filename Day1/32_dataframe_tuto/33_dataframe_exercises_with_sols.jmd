@@ -17,7 +17,7 @@ Downloads.download("https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-page
 Load the data from the file into a `DataFrame` called `iris_df`.
 ```julia
 using CSV, DataFrames
-iris_df = DataFrame(CSV.File(iris_data_filename))
+iris_df = CSV.read(iris_data_filename, DataFrame)
 ```
 
 Print the entire DataFrame. 
