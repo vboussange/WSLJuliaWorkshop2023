@@ -60,8 +60,6 @@ And its solution plotted
 plot(sol, idxs=(1,2,3)) # plot Lorenz attractor
 ````
 
-![lorenz](./figures/l1_lorenz.png)
-
 ###  Let's get our hands dirty!
 
 Steps:
