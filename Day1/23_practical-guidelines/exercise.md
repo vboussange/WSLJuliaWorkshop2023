@@ -99,6 +99,10 @@ Here are some tips to help you complete this exercise:
 - Use the `StatsModels.jl` package to perform linear regression on the fish data. 
 - Use the `DataFrames.jl` package to work with the fish data as a `DataFrame`. 
 - Use the `Test.jl` package to write your unit tests.
+
+```shell
+chmod u+x run_analyses.sh
+```
 ### Deliverables
 
 Your deliverables for this exercise are: 
