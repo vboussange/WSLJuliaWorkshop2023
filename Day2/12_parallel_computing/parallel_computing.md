@@ -171,6 +171,43 @@ There exists an MPI (Message Passing Interface) interface for the Julia language
 
 ## GPU computing
 
+Multiple dispatch allows your code to be executed on GPUS! Here is how.
+
+Assume
+```julia
+
+function myfun(a::AbstractArray, b::AbstractArray)
+    return sum(a.^2 .* b)
+end
+
+# generate CPU arrays
+a = rand(Float32, 1000, 1000)
+b = rand(Float32, 1000, 1000)
+
+using BenchmarkTools
+@btime myfun(a, b) # 820.959 μs (3 allocations: 7.63 MiB)
+```
+
+### GPU programming on MacOS
+```julia
+using Metal
+a_gpu = MtlArray(a)
+b_gpu = MtlArray(b)
+
+@btime myfun(a_gpu, b_gpu)
+```
+
+### GPU programming with CUDA
+```julia
+using CUDA
+
+if CUDA.functional()
+    a = CUDA.rand(1000, 1000)
+    b = CUDA.rand(1000, 1000)
+    @btime myfun(a, b)
+end
+
+```
 
 ### Additional resources
 - [Discourse category Julia at scale](https://discourse.julialang.org/c/domain/parallel/34)
