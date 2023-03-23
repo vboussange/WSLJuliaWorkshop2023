@@ -86,6 +86,11 @@ md"""
 - Rasters.jl for raster geo-data
 - JLSO.jl for storing anything
 - OrdinaryDiffEq.jl to solve Ordinary Differential Equations (ODEs)
+
+A few HPC (Ludovic's favorits):
+- MPI.jl -- inter-node communication on clusters
+- CUDA.jl, AMDGPU.jl -- to run Julia code on Nvidia and AMD GPUs
+- ParallelStencil.jl, ImplicitGlobalGrid.jl -- packages he's developing to solve PDEs on GPUs
 """
 
 md"""
