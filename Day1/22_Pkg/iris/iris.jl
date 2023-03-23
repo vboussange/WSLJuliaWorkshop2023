@@ -1,26 +1,22 @@
-# # Iris data
 
-# In this example, we create a logistic regression model that classifies iris flowers. 
-# It consists of a [single-layer neural network](https://sebastianraschka.com/faq/docs/logisticregr-neuralnet.html) 
-# that outputs **three** probabilities (one for each species of iris flowers). 
-# We use Fisher's classic dataset to train the model. This dataset is retrieved from 
-# the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/iris).
+#=
+Example taken from [Flux Model Zoo](https://github.com/FluxML/model-zoo)
+In this example, we create a logistic regression model that classifies iris flowers. 
+It consists of a [single-layer neural network](https://sebastianraschka.com/faq/docs/logisticregr-neuralnet.html) 
+that outputs **three** probabilities (one for each species of iris flowers). 
+We use Fisher's classic dataset to train the model. This dataset is retrieved from 
+the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/iris).
 
-# In Machine Learning, a classification task can be performed by a logistic regression model. 
-# However, we also can create a logistic regression model as a single-layer neural network. 
-# This neural network has the following characteristics:
+In Machine Learning, a classification task can be performed by a logistic regression model. 
+However, we also can create a logistic regression model as a single-layer neural network. 
+This neural network has the following characteristics:
 
-# * Uses the [logitcrossentropy](https://fluxml.ai/Flux.jl/stable/models/losses/#Flux.Losses.logitcrossentropy) loss function.
-# * Expects the class labels of the iris flowers encoded using [One-Hot encoding](https://fluxml.ai/Flux.jl/stable/data/onehot/#One-Hot-Encoding).
-# * Outputs the index in the output vector with the highest value as the class label using 
-# [onecold](https://fluxml.ai/Flux.jl/stable/data/onehot/#Flux.onecold) which is the inverse operation of One-Hot encoding.
+* Uses the [logitcrossentropy](https://fluxml.ai/Flux.jl/stable/models/losses/#Flux.Losses.logitcrossentropy) loss function.
+* Expects the class labels of the iris flowers encoded using [One-Hot encoding](https://fluxml.ai/Flux.jl/stable/data/onehot/#One-Hot-Encoding).
+* Outputs the index in the output vector with the highest value as the class label using 
+[onecold](https://fluxml.ai/Flux.jl/stable/data/onehot/#Flux.onecold) which is the inverse operation of One-Hot encoding.
 
-# To run this example, we need the following packages:
-
-# Suggested in the documentation readme, but uncomment if installation of packages is needed
-# import Pkg 
-# Pkg.activate(".") # activate in the folder of iris
-# Pkg.instantiate() # installs required packages for the example
+=#
 
 using Flux, MLDatasets, DataFrames
 using Flux: logitcrossentropy, normalise, onecold, onehotbatch
