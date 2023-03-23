@@ -77,8 +77,6 @@ And its solution plotted
 """
 plot(sol, idxs=(1,2,3)) # plot Lorenz attractor
 
-#md # ![lorenz](./figures/l1_lorenz.png)
-
 #src #########################################################################
 #nb # %% A slide [markdown] {"slideshow": {"slide_type": "slide"}}
 md"""
