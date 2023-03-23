@@ -4,7 +4,7 @@ This repository contains materials for the [WSL Julia Workshop 2023](https://www
 
 # Content
 
-The repository is organized by days and sessions. Please refer to the [Program](#program) to navigate within the repo.
+The repository is organized by days and sessions. Please refer to the [Program](#program) section to navigate within the repo.
 
 # Requirements
 

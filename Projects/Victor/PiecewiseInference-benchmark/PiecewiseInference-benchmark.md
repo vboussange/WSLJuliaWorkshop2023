@@ -17,10 +17,13 @@ Install the required packages
 
 PiecewiseInference and EcoEvoModelZoo are unregistered packages - check out their github repository to understand how to install it.
 
-Rapidly scan through the following tutorials, that provide hands-on explanations on how to use each of the inverse modelling packages
-- [A cool Julia tutorial on approximate Bayesian computation with ApproxBayes.jl](https://vboussange.github.io/post/abc_inference/).
-- [A cool Julia tutorial on Bayesian inference with Turing.jl](https://turinglang.org/v0.24/tutorials/10-bayesian-differential-equations/).
-- A cool Julia tutorial on how to use PiecewiseInference with a 5 species ecosystem model.
+#### Resources
+- Rapidly scan through the following tutorials, that provide hands-on explanations on how to use each of the inverse modelling packages
+  - [A cool Julia tutorial on approximate Bayesian computation with ApproxBayes.jl](https://vboussange.github.io/post/abc_inference/).
+  - [A cool Julia tutorial on Bayesian inference with Turing.jl](https://turinglang.org/v0.24/tutorials/10-bayesian-differential-equations/).
+  - A cool Julia tutorial on how to use PiecewiseInference with a 5 species ecosystem model.
+- [Some nice benchmarks from the SciML ecosystem](https://docs.sciml.ai/SciMLBenchmarksOutput/stable/BayesianInference/DiffEqBayesFitzHughNagumo/)
+  - In particular, check this [benchmark](https://docs.sciml.ai/SciMLBenchmarksOutput/stable/BayesianInference/DiffEqBayesLorenz/)
 
 
 #### Generate time series data and functions to evaluate the three methods
