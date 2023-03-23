@@ -39,7 +39,7 @@ know where that is)
 
 - 🎤 Greetings to the Workshop (@Mauro and @Victor) **9:00-9:10**
 - 🎤 Overview of the Julia programming language (@Mauro) **9:10-9:30**
-- 💻 Jupyter hub practical (@Mauro) **9:30-10:30**
+- 🎤💻 Jupyter hub practical (@Mauro) **9:30-10:30**
   - **Practical** Basic syntax and data types
   - **Practical** Control flow and conditional statements
 ### Coffee break
@@ -54,7 +54,7 @@ know where that is)
   - Pkg management and environments
   - editors (vscode integration)
 
-- 💻 **Exercises** (@Mauro) 12:00-12:30
+- 💻 **Exercises** (@Mauro) **12:00-12:30**
 
 - 💻 **Additional exercises**
 
@@ -64,28 +64,34 @@ know where that is)
 ### Afternoon session 1
 **13:30 - 15:00**
 
-- 🎤 **Talk** Overview of the ecosystem (@Mauro) **13:30-14:00**
+- 🎤 **Talk** Overview of the ecosystem (@Mauro) **13:30-13:45**
   - the Julia discourse,
   - the packages we like best,
 
-- 🎤 💻 **Interactive talk** [`DataFrames`, broadcasting, loading CSV](Day1/32_dataframe_tuto/32_dataframe_tuto.ipynb) (@Victor) **14:00-14:15**
+- 🎤 💻 **Interactive talk** [`DataFrames`, broadcasting, loading CSV](Day1/32_dataframe_tuto/32_dataframe_tuto.ipynb) (@Victor) **13:45-14:05**
 
 
-- 🎤 💻 **Interactive talk**  Plotting and visualisation (@Mauro) **14:15-14:30**
+- 💻 [Hands-on exercises](Day1/32_dataframe_tuto/33_dataframe_exercises.md) **14:05-14:30**
 
-- 💻 [Hands-on exercises](Day1/32_dataframe_tuto/33_dataframe_exercises.md) (@Victor) **14:30-15:00**
+
+- 🎤 💻 **Interactive talk**  Plotting and visualisation (@Mauro) **14:30-14:45**
+
+- 💻 [Hands-on exercises continued](Day1/32_dataframe_tuto/33_dataframe_exercises.md) **14:45-15:00**
 
 ### Coffee break
 **15:00 - 15:30**
 
 ### Afternoon session 2
-- 🎤 💻 **Interactive talk** Saving and loading data in Julia (Mauro) **14:15-14:30**
-- 💻 [Coding the game of life](Day1/AfternoonSession2/game_of_life.md) **14:30:16:30**
-- 🧵 **Wrap-up and discussion** **16:30-17:00**
+- 🎤 **Talk**: Why I like Julia (@Ludovic) **15:30-15:40**
+- 🎤 💻 **Interactive talk** Saving and loading data in Julia (Mauro) **-15:40-15:55**
+- 💻 Hands-on exercises  **15:55-17:00**
+  - [Coding the game of life](Day1/AfternoonSession2/game_of_life.md)
+  - Continuing previous exercises
 
 
 
 ### 🍻 Apéro
+**17:00-🌙**
 
 ## Day 2: Project-oriented day
 
