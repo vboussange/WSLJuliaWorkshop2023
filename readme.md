@@ -29,6 +29,10 @@ git clone https://github.com/vboussange/WSLJuliaWorkshop2023.git
 ```
 
 # Program
+How you should read this program
+- 🎤 : Talk
+- 💻: Hands-on exercises
+- 🎤💻: Interactive session
 ## Day 1: Introduction to the Language, hands on exercises
 
 **8:50** Arrival at Englersaal, WSL (ask at the reception if you don't
@@ -47,44 +51,48 @@ know where that is)
 
 ### Morning session 2
 **11-12:30**
-- 🎤 **Experience** [Why I like Julia](Day1/21_why-i-like-julia-VB/21_why-i-like-julia-VB.ipynb) (@Victor) **11:00-11:30**
+- 🎤 [Why I like Julia](Day1/21_why-i-like-julia-VB/21_why-i-like-julia-VB.ipynb) (@Victor) **11:00-11:15**
 
-- 🎤 💻 **session/talk (interactive)** [A practical guideline on how to work with Julia](Day1/22_practical-guidelines/22_practical-guidelines.md) (@Victor) **11:30-12:00**
-  - julia installation
-  - Pkg management and environments
-  - editors (vscode integration)
+- 💻🎤 Package management (@Victor) **11:15-11:45**
+  - Introduction to `Pkg.jl`
+  - Exercise: set-up you environment
 
-- 💻 **Exercises** (@Mauro) **12:00-12:30**
 
-- 💻 **Additional exercises**
+- 💻🎤  [A practical guideline on how to work with Julia](Day1/22_practical-guidelines/22_practical-guidelines.md) (@Victor) **11:45-12:30**
+  - VSCode editor
+  - Remote development
+  - Project management
+  - Exercise
+
+- 💻 Additional exercises
 
 ### Lunch
 **12:30 - 13:30**
 
-### Afternoon session 1
+### Afternoon session 3
 **13:30 - 15:00**
 
 - 🎤 **Talk** Overview of the ecosystem (@Mauro) **13:30-13:45**
   - the Julia discourse,
   - the packages we like best,
 
-- 🎤 💻 **Interactive talk** [`DataFrames`, broadcasting, loading CSV](Day1/32_dataframe_tuto/32_dataframe_tuto.ipynb) (@Victor) **13:45-14:05**
+- 🎤 💻 [`DataFrames`, broadcasting, loading CSV](Day1/32_dataframe_tuto/32_dataframe_tuto.ipynb) (@Victor) **13:45-14:05**
 
 
 - 💻 [Hands-on exercises](Day1/32_dataframe_tuto/33_dataframe_exercises.md) **14:05-14:30**
 
 
-- 🎤 💻 **Interactive talk**  Plotting and visualisation (@Mauro) **14:30-14:45**
+- 🎤 💻 Plotting and visualisation (@Mauro) **14:30-14:45**
 
 - 💻 [Hands-on exercises continued](Day1/32_dataframe_tuto/33_dataframe_exercises.md) **14:45-15:00**
 
 ### Coffee break
 **15:00 - 15:30**
 
-### Afternoon session 2
-- 🎤 **Talk**: Why I like Julia (@Ludovic) **15:30-15:40**
-- 🎤 💻 **Interactive talk** Saving and loading data in Julia (Mauro) **-15:40-15:55**
-- 💻 Hands-on exercises  **15:55-17:00**
+### Afternoon session 4
+- 🎤 Why I like Julia (@Ludovic) **15:30-15:40**
+- 🎤 💻 Saving and loading data in Julia (Mauro) **-15:40-15:55**
+- 💻 Hands-on exercises **15:55-17:00**
   - [Coding the game of life](Day1/AfternoonSession2/game_of_life.md)
   - Continuing previous exercises
 
@@ -99,16 +107,16 @@ The goal of this second-day workshop is to provide participants with an opportun
 
 ### Morning session 1
 
-- Geospatial data handling (@Mauro) **9:00-9:30**
+- 🎤 💻 Geospatial data handling (@Mauro) **9:00-9:30**
   - rasters
   - shapefiles
 
-- Parallel computing (@Victor) **9:30-10:00**
+- 🎤 💻 Parallel computing (@Victor) **9:30-10:00**
   - threads 
   - distributed
 
 
-- Profiling Julia code (@Mauro) **10:00-10:30**
+- 🎤 💻 Profiling Julia code (@Mauro) **10:00-10:30**
 
 
 
@@ -116,28 +124,26 @@ The goal of this second-day workshop is to provide participants with an opportun
 **10:30-11:00**
 
 ### Morning session 2
-- Interface with Python, R, matlab (@Victor) **11:00-11:30**
+- 🎤 Interface with Python, R, MATLAB (@Victor) **11:00-11:30**
 
-- **Talk** Track Introductions (@Victor and @Mauro) **11:30-12:30**
+- 🎤 Track Introductions (@Victor and @Mauro) **11:30-12:30**
   - Biodiversity track
   - Glaciology track
 
 
 ### Lunch
 
-### Afternoon session 1
-- Project session **13:30-15:00**
-
-
+### Afternoon session 3
+- 💻 Project session **13:30-15:00**
 
 ### Coffee break 
 **15:00-15:30**
 
-### Afternoon session 2 
+### Afternoon session 4
 
-- Project session **15:30-16:00**
-- Participants will share their progress and discuss their experience working on the project. **16:00-16:45**
-- Feedback **16:45 - 17:00**
+- 💻 Project session **15:30-16:00**
+- 🎤 Project presentation **16:00-16:45**
+- 🎤 Feedback **16:45 - 17:00**
 
 
 # Projects
