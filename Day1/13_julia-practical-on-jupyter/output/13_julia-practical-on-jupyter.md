@@ -1,7 +1,3 @@
-```@meta
-EditURL = "<unknown>/13_julia-practical-on-jupyter.jl"
-```
-
 # Practical introduction to Julia-basics
 
 We will cover:
@@ -38,7 +34,7 @@ info see the [documentation](https://jupyter-notebook.readthedocs.io/en/stable/)
 
 Revisiting the Lorenz system of ODEs:
 
-````@example 13_julia-practical-on-jupyter
+````julia
 using OrdinaryDiffEq, Plots
 
 function lorenz(x, p, t)
@@ -60,7 +56,7 @@ Yes, this takes some time... Julia is Just-Ahead-of-Time compiled.  I.e. Julia i
 
 And its solution plotted
 
-````@example 13_julia-practical-on-jupyter
+````julia
 plot(sol, idxs=(1,2,3)) # plot Lorenz attractor
 ````
 
@@ -69,9 +65,14 @@ plot(sol, idxs=(1,2,3)) # plot Lorenz attractor
 ###  Let's get our hands dirty!
 
 Steps:
-1) download this notebook
-2) start Jupyter
-3) open notebook
+1) download this notebook & the `Project.toml` file (clone it, download them, etc.)
+   - find in in `WSLJuliaWorkshop2023/Day1/13_julia-practical-on-jupyter/output/`
+2) start Jupyter in the folder containing the two files:
+   - at the command prompt `jupyter notebook`
+   - in the Julia REPL `julia> using IJulia; notebook()`
+3) open notebook `13_julia-practical-on-jupyter.ipynb` in browser
+
+--> everyone got it running?
 
 ###  Let's get our hands dirty!
 
@@ -91,7 +92,7 @@ There are also tutorials, see [https://julialang.org/learning/](https://julialan
 
 Help on functions, variables, etc. can be gotten with `?xyz` (execute it in a cell by itself)
 
-````@example 13_julia-practical-on-jupyter
+````julia
 # ?cos
 ````
 
@@ -100,14 +101,14 @@ Help on functions, variables, etc. can be gotten with `?xyz` (execute it in a ce
 - what is it
 - incidentally, how can you use unicode variables?
 
-````@example 13_julia-practical-on-jupyter
+````julia
 #
 ````
 
 ## Variables, assignments, and types
 [https://docs.julialang.org/en/v1/manual/variables/](https://docs.julialang.org/en/v1/manual/variables/)
 
-````@example 13_julia-practical-on-jupyter
+````julia
 a = 4
 b = "a string"
 c = b # now b and c bind to the same value
@@ -145,25 +146,25 @@ then paste the symbol.)
 - arrays
 - dictionaries
 
-````@example 13_julia-practical-on-jupyter
+````julia
 1     # 64 bit integer (or 32 bit if on a 32-bit OS)
 1.5   # Float64
 1//2  # Rational
 ````
 
-````@example 13_julia-practical-on-jupyter
+````julia
 typeof(1.5)
 ````
 
-````@example 13_julia-practical-on-jupyter
+````julia
 "a string", (1, 3.5) # and tuple
 ````
 
-````@example 13_julia-practical-on-jupyter
+````julia
 [1, 2, 3,] # array of eltype Int
 ````
 
-````@example 13_julia-practical-on-jupyter
+````julia
 Dict("a"=>1, "b"=>cos)
 ````
 
@@ -178,7 +179,7 @@ Datatypes belonging to AbstactArrays:
 
 Task: assign two vectors to `a`, and `b` and the concatenate them using `;`:
 
-````@example 13_julia-practical-on-jupyter
+````julia
 a = [2, 3]
 b = ...
 [ ; ]
@@ -187,7 +188,7 @@ b = ...
 Add new elements to a empty Vector `c` (hint look up the documentation for `push!`)
 ((`push!` only works on Vectors, i.e. 1D arrays))
 
-````@example 13_julia-practical-on-jupyter
+````julia
 c = []
 ...
 ````
@@ -196,13 +197,13 @@ c = []
 
 Concatenate a Range, say `1:10`, with a Vector, say [4,5]:
 
-````@example 13_julia-practical-on-jupyter
+````julia
 [  ;  ]
 ````
 
 Make a random array of size (3,3).  Look up `?rand`.  Assign it to `a`
 
-````@example 13_julia-practical-on-jupyter
+````julia
 #
 ````
 
@@ -212,27 +213,27 @@ Make a random array of size (3,3).  Look up `?rand`.  Assign it to `a`
 
 Access element `[1,2]` and `[2,1]` of Matrix `a` (hint use []):
 
-````@example 13_julia-practical-on-jupyter
+````julia
 a[ ... ], a[ ... ]
 ````
 
 Put those two values into a vector
 
-````@example 13_julia-practical-on-jupyter
+````julia
 #
 ````
 
 Linear vs Cartesian indexing,
 access the first element:
 
-````@example 13_julia-practical-on-jupyter
+````julia
 a[1]
 a[1,1]
 ````
 
 Access the last element (look up `?end`) both with linear and Cartesian indices
 
-````@example 13_julia-practical-on-jupyter
+````julia
 a[...]
 a[..., ...]
 ````
@@ -241,13 +242,13 @@ a[..., ...]
 
 Access the last row of `a` (hint use `1:end`)
 
-````@example 13_julia-practical-on-jupyter
+````julia
 a[... , ...]
 ````
 
 Access a 2x2 sub-matrix
 
-````@example 13_julia-practical-on-jupyter
+````julia
 a[ ]
 ````
 
@@ -255,7 +256,7 @@ a[ ]
 
 What do you make of
 
-````@example 13_julia-practical-on-jupyter
+````julia
 a = [1 4; 3 4] # note, this is another way to define a Matrix
 c = a
 a[1, 2] = 99
@@ -272,7 +273,7 @@ In general you don't need to care how they work, just use them.
 
 Useful macros:
 
-````@example 13_julia-practical-on-jupyter
+````julia
 @assert 1==1 # checks that expression evaluates to true, otherwise errors
 
 @time 1+1 # times how long the execution takes
@@ -284,7 +285,7 @@ Useful macros:
 
 An assignment _binds_ the same array to both variables
 
-````@example 13_julia-practical-on-jupyter
+````julia
 c = a
 c[1] = 8
 @assert a[1]==8 # as c and a are the same thing
@@ -296,7 +297,7 @@ Views vs copies:
 In Julia indexing with ranges will create a new array with copies of
 the original's entries (similar to Matlab, unlike Python). Consider
 
-````@example 13_julia-practical-on-jupyter
+````julia
 a = rand(3,4)
 b = a[1:3, 1:2]
 b[1] = 99
@@ -309,7 +310,7 @@ But the memory footprint will be large if we work with large arrays and take sub
 
 "Views" to the rescue (note: another macro)
 
-````@example 13_julia-practical-on-jupyter
+````julia
 a = rand(3,4)
 b = @view a[1:3, 1:2]
 b[1] = 99
@@ -317,7 +318,7 @@ b[1] = 99
 
 check whether the change in `b` is reflected in `a`:
 
-````@example 13_julia-practical-on-jupyter
+````julia
 @assert ...
 ````
 
@@ -327,7 +328,7 @@ All values have types as we saw above.  Arrays store in their type what type the
 
 > Arrays which have concrete element-types are more performant!
 
-````@example 13_julia-practical-on-jupyter
+````julia
 typeof([1, 2]), typeof([1.0, 2.0])
 ````
 
@@ -335,26 +336,26 @@ Aside, they also store their dimension in the second parameter.
 
 The type can be specified at creation
 
-````@example 13_julia-practical-on-jupyter
+````julia
 String["one", "two"]
 ````
 
 Create an array taking `Int` with no elements.  Push `1`, `1.0` and `1.5` to it.  What happens?
 
-````@example 13_julia-practical-on-jupyter
+````julia
 #
 ````
 
 Make an array of type `Any` (which can store any value).  Push a value of type
 Int and one of type String to it.
 
-````@example 13_julia-practical-on-jupyter
+````julia
 #
 ````
 
 Try to assgin 1.5 to the first element of an array of type Array{Int,1}
 
-````@example 13_julia-practical-on-jupyter
+````julia
 #
 ````
 
@@ -363,13 +364,13 @@ Try to assgin 1.5 to the first element of an array of type Array{Int,1}
 Create a uninitialised Matrix of size (3,3) and assign it to `a`.
 First look up the docs of Array with `?Array`
 
-````@example 13_julia-practical-on-jupyter
+````julia
 #
 ````
 
 Test that its size is correct, see `size`
 
-````@example 13_julia-practical-on-jupyter
+````julia
 #
 ````
 
@@ -398,7 +399,7 @@ Write a test which looks at the start of the string in variable `a`
 - "The " then set `b = "A noun"`
 - otherwise set `b = "no idea"`
 
-````@example 13_julia-practical-on-jupyter
+````julia
 #
 ````
 
@@ -416,7 +417,7 @@ else
 end
 ```
 
-````@example 13_julia-practical-on-jupyter
+````julia
 a = rand() * 10
 ...
 ````
@@ -437,7 +438,7 @@ Type your answer here (to start editing, double click into this cell.  When done
 
 [https://docs.julialang.org/en/v1/manual/control-flow/#man-loops](https://docs.julialang.org/en/v1/manual/control-flow/#man-loops)
 
-````@example 13_julia-practical-on-jupyter
+````julia
 for i = 1:3
     println(i)
 end
@@ -474,7 +475,7 @@ Read [https://docs.julialang.org/en/v1/manual/functions/](https://docs.julialang
 Define a function in long-form which takes two arguments.
 Use some if-else statements and the return keyword.
 
-````@example 13_julia-practical-on-jupyter
+````julia
 #
 ````
 
@@ -485,7 +486,7 @@ does the same.  Map `sin` over the vector `1:10`.
 
 (Note, this is a higher-order function: a function which take a function as a argument)
 
-````@example 13_julia-practical-on-jupyter
+````julia
 #
 ````
 
@@ -496,7 +497,7 @@ function over values.
 
 Example:
 
-````@example 13_julia-practical-on-jupyter
+````julia
 sin.(1:10)
 ````
 
@@ -511,7 +512,7 @@ Read [https://docs.julialang.org/en/v1/manual/functions/#man-anonymous-functions
 Map the function `f(x,y) = sin(x) + cos(x)` over `1:10` but define `f` as an anonymous
 function.
 
-````@example 13_julia-practical-on-jupyter
+````julia
 map(..., 1:10)
 ````
 
@@ -536,7 +537,7 @@ JuliaCon 2019 presentation on the subject by Stefan Karpinski
 
 ## Functions: Multiple dispatch demo
 
-````@example 13_julia-practical-on-jupyter
+````julia
 struct Rock end
 struct Paper end
 struct Scissors end
@@ -561,7 +562,7 @@ Can easily be extended later
 
 with new type:
 
-````@example 13_julia-practical-on-jupyter
+````julia
 struct Pond end
 play(::Rock, ::Pond) = "Pond wins"
 play(::Paper, ::Pond) = "Paper wins"
@@ -572,7 +573,7 @@ play(Scissors(), Pond())
 
 with new function:
 
-````@example 13_julia-practical-on-jupyter
+````julia
 combine(::Rock, ::Paper) = "Paperweight"
 combine(::Paper, ::Scissors) = "Two pieces of papers"
 # ...
@@ -598,7 +599,7 @@ using OrdinaryDiffEq, Plots
 This statement loads the two packages `OrdinaryDiffEq` and `Plots` and makes their functions
 and types available in the current session.
 
-````@example 13_julia-practical-on-jupyter
+````julia
 using Plots
 plot( (1:10).^2 )
 ````

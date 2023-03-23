@@ -59,9 +59,14 @@ plot(sol, idxs=(1,2,3)) # plot Lorenz attractor
 # ###  Let's get our hands dirty!
 #
 # Steps:
-# 1) download this notebook
-# 2) start Jupyter
-# 3) open notebook
+# 1) download this notebook & the `Project.toml` file (clone it, download them, etc.)
+#    - find in in `WSLJuliaWorkshop2023/Day1/13_julia-practical-on-jupyter/output/`
+# 2) start Jupyter in the folder containing the two files:
+#    - at the command prompt `jupyter notebook`
+#    - in the Julia REPL `julia> using IJulia; notebook()`
+# 3) open notebook `13_julia-practical-on-jupyter.ipynb` in browser
+
+# --> everyone got it running?
 
 # ###  Let's get our hands dirty!
 #
