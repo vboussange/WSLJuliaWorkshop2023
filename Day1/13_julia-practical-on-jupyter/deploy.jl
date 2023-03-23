@@ -2,7 +2,7 @@ using GlacioTeaching
 
 fl = joinpath(@__DIR__, "13_julia-practical-on-jupyter.jl")
 for typ in [:jl, :md, :nb]
-    GlacioTeaching.process_file(fl, joinpath(@__DIR__, "output"), typ;
+    GlacioTeaching.process_file(fl, joinpath(@__DIR__, "output"), typ;  # note that an absolute path is needed for the figs to show up
                                 make_outputs=[:sol, :assignment, :no_preprocessing][2],
                                 sub_nbinclude=true,
                                 path_nbinclude=nothing,
