@@ -43,9 +43,11 @@ know where that is)
 
 - 🎤 Greetings to the Workshop (@Mauro and @Victor) **9:00-9:10**
 - 🎤 Overview of the Julia programming language (@Mauro) **9:10-9:30**
-- 🎤💻 Jupyter hub practical (@Mauro) **9:30-10:30**
+- 🎤💻 [Jupyter hub practical](Day1/13_julia-practical-on-jupyter/output) (@Mauro) **9:30-10:30**
   - **Practical** Basic syntax and data types
   - **Practical** Control flow and conditional statements
+> Pick up any format you like best among the `.ipynb`, `.md` and `.jl` files. Their content is the same!
+
 ### Coffee break
 **10:30 - 11:00**
 
@@ -53,16 +55,16 @@ know where that is)
 **11-12:30**
 - 🎤 [Why I like Julia](Day1/21_why-i-like-julia-VB/21_why-i-like-julia-VB.ipynb) (@Victor) **11:00-11:15**
 
-- 💻🎤 Package management (@Victor) **11:15-11:45**
-  - Introduction to `Pkg.jl`
-  - Exercise: set-up you environment
+- 💻🎤 Package and project management (@Victor) **11:15-11:45**
+  - [Introduction to `Pkg.jl`](Day1/22_pkg_and_project_management/Pkg.ipynb)
+  - [Julia projects managements](Day1/22_pkg_and_project_management/practical_guideline.ipynb)
+  - [Exercise: set-up you environment](Day1/22_pkg_and_project_management/exercise.md)
 
 
 - 💻🎤  [A practical guideline on how to work with Julia](Day1/22_practical-guidelines/22_practical-guidelines.md) (@Victor) **11:45-12:30**
   - VSCode editor
   - Remote development
-  - Project management
-  - Exercise
+  - [Exercise: your first project in Julia](Day1/22_pkg_and_project_management/exercise.md)
 
 - 💻 Additional exercises
 

@@ -4,6 +4,15 @@ In this exercise, we'll explore how the relationship between the size of a tree 
 
 ### Requirements
 
+#### Part 1: Package management
+
+- Activate your environment, and install the following dependencies
+  - `GLM`
+  - `DataFrames`
+  - `CSV`
+
+#### Part 2: project management
+
 - Create a new project directory and set up the following directory structure
 
 ```css
@@ -22,11 +31,6 @@ my_project/
 ├── run_code.sh
 └── my-analysis.jl
 ```
-
-- Activate your environment, and install the following dependencies
-  - `GLM`
-  - `DataFrames`
-  - `CSV`
 
 - In the `src/regression_functions.jl`, create a function `linear_regression` that takes in a string corresponding to the location of a CSV file, and outputs the slope associated p-value of the linear regression between `tree_size` and `carbon_content` variables in the CSV.
 
