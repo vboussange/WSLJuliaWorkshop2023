@@ -55,10 +55,13 @@ know where that is)
 **11-12:30**
 - 🎤 [Why I like Julia](Day1/21_why-i-like-julia-VB/21_why-i-like-julia-VB.ipynb) (@Victor) **11:00-11:15**
 
-- 💻🎤 Package and project management (@Victor) **11:15-11:45**
-  - [Introduction to `Pkg.jl`](Day1/22_pkg_and_project_management/Pkg.ipynb)
-  - [Julia projects managements](Day1/22_pkg_and_project_management/practical_guideline.ipynb)
-  - [Exercise: set-up you environment](Day1/22_pkg_and_project_management/exercise.md)
+- Package and project management (@Victor) **11:15-11:45**
+  - 💻🎤 [Introduction to `Pkg.jl`](Day1/22_pkg_and_project_management/Pkg.ipynb)
+  - 💻[Exercise 1: activate an environment and run the associated script](Day1/22_pkg_and_project_management/exercise1.md)
+  - 💻[Exercise 2: Part 1](Day1/22_pkg_and_project_management/exercise2.md): Set-up the environment of your project
+
+  - 💻🎤[Julia projects managements](Day1/22_pkg_and_project_management/practical_guideline.ipynb)
+  - 💻[Exercise 2: Part 2.](Day1/22_pkg_and_project_management/exercise2.md) Develop your first Julia project
 
 
 - 💻🎤  [A practical guideline on how to work with Julia](Day1/22_practical-guidelines/22_practical-guidelines.md) (@Victor) **11:45-12:30**
