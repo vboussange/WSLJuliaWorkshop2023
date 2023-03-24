@@ -121,5 +121,5 @@ The Julia community is very friendly and helpful:
   - StackOverflow (ok, maybe there it's less easy)
   - and on more informal chat-clients: [Slack](https://julialang.slack.com/), [Zulip](https://julialang.zulipchat.com/register/)
 - Active developer community on GitHub
-- the yearly [JuliaCon](https://juliacon.org) is as fun and friendly conference (next one in July)
+- The yearly [JuliaCon](https://juliacon.org) is as fun and friendly conference (next one in July)
 """
