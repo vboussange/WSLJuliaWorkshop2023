@@ -94,7 +94,7 @@ know where that is)
 **15:00 - 15:30**
 
 ### Afternoon session 4
-- 🎤 Why I like Julia (@Ludovic) **15:30-15:40**
+- 🎤 [Why I like Julia](https://github.com/luraess/WSLJulia2023) (@Ludovic) **15:30-15:40**
 - 🎤 💻 Saving and loading data in Julia (Mauro) **-15:40-15:55**
 - 💻 Hands-on exercises **15:55-17:00**
   - [Coding the game of life](Day1/AfternoonSession2/game_of_life.md)
