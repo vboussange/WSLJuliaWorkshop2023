@@ -1,4 +1,4 @@
-using Rasters, GBIF2, Plots
+using Rasters, GBIF2, Plots, DataFrames
 ENV["RASTERDATASOURCES_PATH"] = "/Users/victorboussange/ETHZ/projects/raster_data"
 
 
@@ -11,7 +11,8 @@ coords = collect((r.decimalLongitude, r.decimalLatitude) for r in obs)
 # load environmtal variable raster
 env_var = RasterStack(CHELSA{BioClim}, (1, 3, 7, 12))[Band(1)]
 # retrieve environmtal variable at presence coordinates
-collect(extract(env_var, coords))
+presence_data = DataFrame(extract(env_var, coords))
+y = ones(size(presence_data,1))
 
 # cropping the raster
 using Downloads, Shapefile, DataFrames
@@ -19,14 +20,30 @@ using Downloads, Shapefile, DataFrames
 ne_url = "https://github.com/nvkelso/natural-earth-vector/raw/master/10m_cultural/ne_10m_admin_0_countries"
 shp_url, dbf_url  = ne_url * ".shp", ne_url * ".dbf"
 shp_name, dbf_name = "country_borders.shp", "country_borders.dbf"
-isfile(shp_name) || Downloads.download(shp_url, shp_name)
-isfile(dbf_url) || Downloads.download(dbf_url, dbf_name)
+# isfile(shp_name) || Downloads.download(shp_url, shp_name)
+# isfile(dbf_url) || Downloads.download(dbf_url, dbf_name)
 
 # Load the shapes for world countries
 countries = Shapefile.Table(shp_name) |> DataFrame
 CHE_polygon = countries[countries.ADM0_A3 .== "CHE", :geometry]
 
 # we need to generate pseudo absences. here is a python script to do that
+min_lat, max_lat = minimum(obs.decimalLatitude), maximum(obs.decimalLatitude)
+min_long, max_long = minimum(obs.decimalLongitude), maximum(obs.decimalLongitude)
+
+using Distributions
+num_pseudo_absences = size(obs, 1)
+pseud_absence_coords = [(rand(Uniform(min_lat, max_lat)), rand(Uniform(min_long, max_long))) for i = 1:num_pseudo_absences]
+
+pseud_absence_data = DataFrame(extract(env_var, pseud_absence_coords))
+
+
+# using Metal
+device_array = cpu
+
+train_data_balanced = vcat(presence_data, pseud_absence_data)[:,2:end] |> Array{Float32,2} |> adjoint |> MtlArray
+y = vcat(y, zeros(size(train_data_balanced,2))) |> Vector{Float32} |> adjoint |> MtlArray
+
 
 #=
 # create pseudo-absence data by randomly sampling from within the range of our latitude and longitude values
@@ -91,38 +108,59 @@ data = pd.merge(data, environmental_data, on=['decimalLatitude', 'decimalLongitu
 =#
 
 # plotting
+
 using Plots
+using MLUtils
 env_var_CHE = trim(mask(env_var; with=CHE_polygon); pad=10)
 plot(env_var_CHE)
 
 # building a data generator function
-train_idx, test_idx = splitobs(1:size(clm5_data,1), at=split_at)
+split_at = 0.7
+train_idx, test_idx = splitobs(1:size(train_data_balanced,2), at=split_at)
+
+X_train, y_train = train_data_balanced[:, train_idx], y[:, train_idx]
+X_test, y_test = train_data_balanced[:, test_idx], y[:, test_idx]
+
+# Scale features
 
 
 # building a neural net
 using Flux
-function init_NN(;npreds, 
-    nhlayers = 1, # number of hiddel layers
-    hls = npreds + 50, # hidden layer size
-    activation # activation function
-    )
-    if nhlayers == -1
-        nn = Flux.Chain(Dense(npreds, 1, activation))
-    else
-        hlayers = [Dense(hls, hls, activation) for _ in 1:nhlayers]
-        nn = Flux.Chain(Dense(npreds, hls, tanh),
-                        hlayers...,
-                        Dense(hls, 1, activation))
-    end
-    return destructure(nn)
-end
 
-# using cross entropy
-using Flux.Losses
-loss(x, y) = binarycrossentropy(model(x), y)
+# Define model architecture
+model = Chain(
+    Dense(size(train_data_balanced, 1), 10, relu),
+    Dense(10, 1),
+    softmax)
+
+
+# testing model
+model(X_train)
+y
+binarycrossentropy(model(X_train), y_train)
 
 
 # Train model
-opt = Adam()
-data = Flux.Data.DataLoader(x, y, batchsize = 32, shuffle = true)
-Flux.train!(loss, params(model), data, opt)
+import Flux.Data:DataLoader
+# using cross entropy
+using Flux.Losses
+
+batch_size = 32
+num_epochs = 50
+opt_state = Flux.setup(Adam(), model)
+
+# Training loop, using the whole data set 1000 times:
+losses = []
+for epoch in 1:num_epochs
+    for batch in Flux.Data.DataLoader((X_train, y_train), batchsize=batch_size, shuffle=true)
+        _l, grads = Flux.withgradient(model) do m
+            # Evaluate model and loss inside gradient context:
+            binarycrossentropy(model(X_train), y_train)
+        end
+        Flux.update!(opt_state, model, grads[1])
+        push!(losses, _l)  # logging, outside gradient context
+        # Evaluate model on test set
+    end
+    acc = binarycrossentropy(model(X_test), y_test')
+    println("Epoch $epoch, accuracy: $acc, loss: $(losses[end])")
+end
