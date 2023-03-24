@@ -11,19 +11,15 @@ function update_plot(grid)
 end
 
 # Define a function to count the number of live neighbors for each cell
-function count_neighbors(grid, x, y)
+function count_neighbors(grid, idx)
     count = 0
-    for i in -1:1
-        for j in -1:1
-            if i == 0 && j == 0
-                continue
-            end
-            x_new = x + i
-            y_new = y + j
-            if x_new < 1 || x_new > size(grid, 1) || y_new < 1 || y_new > size(grid, 2)
-                continue
-            end
-            count += grid[x_new, y_new]
+    for n in CartesianIndices((-1:1, -1:1))
+        if n == (0, 0)
+            continue
+        end
+        idx_new = idx + n
+        if idx_new in axes(grid)
+            count += grid[idx_new]
         end
     end
     return count
