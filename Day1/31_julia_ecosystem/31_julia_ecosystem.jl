@@ -98,7 +98,9 @@ md"""
 
 Victor:
 - HighDimPDE.jl -- to solve high dimensional PDEs
-
+- EvoId.jl -- Evolutionary Individual based modelling, mathematically grounded.
+- PiecewiseInference.jl -- Suite for parameter inference and model selection with dynamical models characterised by complex dynamics.
+- EcoEvoModelZoo.jl -- A zoo of eco-evolutionary models with high fitness.
 Mauro:
 - Parameters.jl, UnPack.jl and SimpleTraits.jl -- utility packages for
 - KissMCMC.jl -- an affine invariant MCMC sampler
