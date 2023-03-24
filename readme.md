@@ -97,7 +97,7 @@ know where that is)
 - 🎤 [Why I like Julia](https://github.com/luraess/WSLJulia2023) (@Ludovic) **15:30-15:40**
 - 🎤 💻 Saving and loading data in Julia (Mauro) **-15:40-15:55**
 - 💻 Hands-on exercises **15:55-17:00**
-  - [Coding the game of life](Day1/AfternoonSession2/game_of_life.md)
+  - [Coding the game of life](Day1/42_game_of_life/42_game_of_life.md)
   - Continuing previous exercises
 
 
