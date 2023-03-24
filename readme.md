@@ -43,7 +43,7 @@ know where that is)
 
 - 🎤 Greetings to the Workshop (@Mauro and @Victor) **9:00-9:10**
 - 🎤 Overview of the Julia programming language (@Mauro) **9:10-9:30**
-- 🎤💻 [Jupyter hub practical](Day1/13_julia-practical-on-jupyter/output) (@Mauro) **9:30-10:30**
+- 🎤💻 [**Practical**: your first lines of Julia code](Day1/13_julia-practical-on-jupyter/output) (@Mauro) **9:30-10:30**
   - **Practical** Basic syntax and data types
   - **Practical** Control flow and conditional statements
 > Pick up any format you like best among the `.ipynb`, `.md` and `.jl` files. Their content is the same!
@@ -64,7 +64,7 @@ know where that is)
   - 💻[Exercise 2: Part 2.](Day1/22_pkg_and_project_management/exercise2.md) Develop your first Julia project
 
 
-- 💻🎤  [VS code workflow and remote development](Day1/23_vscode_remote_dev/vs_code_workflow.ipynb) (@Victor) **11:45-12:30**
+- 💻🎤 [VS code workflow and remote development](Day1/23_vscode_remote_dev/vs_code_workflow.ipynb) (@Victor) **11:45-12:30**
   - VSCode editor
   - Remote development
 
@@ -112,7 +112,7 @@ The goal of this second-day workshop is to provide participants with an opportun
 ### Morning session 1
 
 - 🎤 💻 Geospatial data handling (@Mauro) **9:00-9:30**
-  - rasters
+  - Rasters with Raster.jk
   - shapefiles
   - Hands-on exercises
 
@@ -121,10 +121,10 @@ The goal of this second-day workshop is to provide participants with an opportun
   - Hands-on exercises
 
 
-- 🎤 💻 Parallel computing (@Victor) **10:00-10:30**
-  - threads
-  - distributed
-  - exercise with the code of life.
+- 🎤 💻 [Parallel computing](Day2/12_parallel_computing/parallel_computing.md) (@Victor) **10:00-10:30**
+  - Multithreading
+  - Multiprocessing
+  - Exercise: Parallelizing the code of life.
 
 
 
