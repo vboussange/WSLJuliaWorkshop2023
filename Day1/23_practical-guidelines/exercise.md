@@ -50,3 +50,6 @@ df_results = DataFrame(species_name = [], slope = [], pval = [])
 ```
   - Make sure to print some logging information
   - Output the CSV in the result folder
+
+## Solutions
+You may find the solutions in the `Day1/23_practical-guidelines/my_project` folder.
