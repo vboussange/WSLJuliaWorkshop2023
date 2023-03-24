@@ -93,6 +93,7 @@ A few HPC (Ludovic's favorits):
 - ParallelStencil.jl, ImplicitGlobalGrid.jl -- packages he's developing to solve PDEs on GPUs
 """
 
+#nb # %% A slide [markdown] {"slideshow": {"slide_type": "slide"}}
 md"""
 ### Our packages
 
@@ -101,8 +102,9 @@ Victor:
 - EvoId.jl -- Evolutionary Individual based modelling, mathematically grounded.
 - PiecewiseInference.jl -- Suite for parameter inference and model selection with dynamical models characterised by complex dynamics.
 - EcoEvoModelZoo.jl -- A zoo of eco-evolutionary models with high fitness.
+
 Mauro:
-- Parameters.jl, UnPack.jl and SimpleTraits.jl -- utility packages for
+- Parameters.jl, UnPack.jl and SimpleTraits.jl -- utility packages (slowly getting superseded by Julia language features)
 - KissMCMC.jl -- an affine invariant MCMC sampler
 - WhereTheWaterFlows.jl -- a flow routing package, uses the D8 algorithm
 
@@ -123,5 +125,5 @@ The Julia community is very friendly and helpful:
   - StackOverflow (ok, maybe there it's less easy)
   - and on more informal chat-clients: [Slack](https://julialang.slack.com/), [Zulip](https://julialang.zulipchat.com/register/)
 - Active developer community on GitHub
-- The yearly [JuliaCon](https://juliacon.org) is as fun and friendly conference (next one in July)
+- The yearly [JuliaCon](https://juliacon.org) is as fun and friendly conference (next one in July at MIT and online)
 """
