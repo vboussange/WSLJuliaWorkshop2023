@@ -64,10 +64,9 @@ know where that is)
   - 💻[Exercise 2: Part 2.](Day1/22_pkg_and_project_management/exercise2.md) Develop your first Julia project
 
 
-- 💻🎤  [A practical guideline on how to work with Julia](Day1/22_practical-guidelines/22_practical-guidelines.md) (@Victor) **11:45-12:30**
+- 💻🎤  [VS code workflow and remote development](Day1/23_vscode_remote_dev/vs_code_workflow.ipynb) (@Victor) **11:45-12:30**
   - VSCode editor
   - Remote development
-  - [Exercise: your first project in Julia](Day1/22_pkg_and_project_management/exercise.md)
 
 - 💻 Additional exercises
 
