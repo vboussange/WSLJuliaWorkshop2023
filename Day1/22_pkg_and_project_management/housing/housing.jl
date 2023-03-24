@@ -25,9 +25,7 @@ using Parameters: @with_kw
 
 # ## Data 
 
-# We create the function `get_processed_data` to load the housing data, normalize it, 
-# and finally split it into train and test datasets:
-
+# We create the function `get_processed_data` to load the housing data, and normalize it.
 
 function get_processed_data(split_ratio=0.1)
     isfile("housing.data") ||
@@ -44,31 +42,18 @@ function get_processed_data(split_ratio=0.1)
     return [(x,y)]
 end
 
-# This function performs the following tasks:
-
-# 1. Downloads the housing data. The original size of the data is 505 rows and 14 columns.
-# 2. Loads the data as a 14x505 matrix. This is the shape that Flux expects.
-# 3. Splits the data into features and a target. Notice that the 14th row corresponds to the target for each example.
-# 4. Normalizes the data. For more information on normalizing data, see [How to Use StandardScaler and MinMaxScaler Transforms in Python](https://machinelearningmastery.com/standardscaler-and-minmaxscaler-transforms-in-python/).  
-# 5. Splits the data into train and test datasets.
-    
 
 # ## Model
-# We use a struct to define the model’s parameters. 
-# It contains an array for holding the weights *W* and a vector for the bias term *b*:
-
-# Also, we create the function `predict` to compute the model’s output:
+# A Single dense layer with no activation
 
 model = Dense(13=>1)
-
-# Notice that the function `predict` takes as an argument the model struct we defined above.
 
 # ## Loss function
 
 # The most commonly used loss function for Linear Regression is Mean Squared Error (MSE). 
 # We define the MSE function as:
 
-meansquarederror(ŷ, y) = sum((ŷ .- y).^2)/size(y, 2)
+loss(model, x, y) = mean(abs2.(model(x) .- y));
 
 # **Note:** An implementation of the MSE function is also available in 
 # [Flux](https://fluxml.ai/Flux.jl/stable/models/losses/#Flux.Losses.mse).
@@ -78,12 +63,9 @@ meansquarederror(ŷ, y) = sum((ŷ .- y).^2)/size(y, 2)
 
 
 function train()
-    ## Initialize the Hyperparamters
     
     ## Load the data
     data = get_processed_data()
-        
-    loss(model, x, y) = mean(abs2.(model(x) .- y));
 
     ## Training
     opt = Flux.setup(Adam(), model)
@@ -97,14 +79,6 @@ function train()
 
     # println(loss(model, data...))
 end
-
-# The function above initializes the model’s parameters *W* and *b* randomly. 
-# Then, it sets the learning rate η and θ as a 
-# [params object](https://fluxml.ai/Flux.jl/stable/training/training/#Flux.params) 
-# that points to  W and b. Also, it sets a 
-# [custom training loop](https://fluxml.ai/Flux.jl/stable/training/training/#Custom-Training-loops) 
-# which is the [Gradient descent algorithm](https://en.wikipedia.org/wiki/Gradient_descent). 
-# Finally, it computes the MSE for the test set.
 
 # ## Run the example 
 # We call the `train` function to run the Housing data example:
