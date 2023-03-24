@@ -1,0 +1,5 @@
+[deps]
+Literate = "98b081ad-f1c9-55d3-8b20-4c87d4299306"
+Measurements = "eff96d63-e80a-5855-80a2-b1b0885c5ab7"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
+PythonPlot = "274fc56d-3b97-40fa-a1cd-1b4a50311bf9"
