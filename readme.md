@@ -169,14 +169,14 @@ The goal of this second-day workshop is to provide participants with an opportun
 
 ## Glaciology track
 
-### Shallow ice model in 1D
-Time scales, hysteresis. Real topo.
+- Shallow ice model in 1D
+  - Time scales, hysteresis. Real topo.
 
-### Subglacial water routing
-Yesterday and today (Fischer paper)?
+- Subglacial water routing
+  - Yesterday and today (Fischer paper)?
 
-### Ice thickness estimation
-PoG exercise
+- Ice thickness estimation
+  - PoG exercise
 
 # Additional resources
 - [Julia official list of tutorials](https://julialang.org/learning/tutorials/)
