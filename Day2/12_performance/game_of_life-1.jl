@@ -1,15 +1,15 @@
 using BenchmarkTools
 
-TODO testing
+# TODO1: testing
 
 function count_neighbours(ar, i, j)
     n = 0
-    # TODO5: loop order
+    # TODO6: loop order
     for ii = i-1:i+1
         for jj = j-1:j+1
             ii==i && jj==j && continue
             if ar[ii,jj]
-                #TODO4: type-stable loops
+                #TODO5: type-stable loops
                 n += 1.0
             end
         end
@@ -24,7 +24,7 @@ end
 function update_grid!(grid)
     workarray .= grid
     for j = 2:size(grid,2)-1
-        #TODO1: don't write slow code
+        #TODO2: don't write slow code
         sleep(0.001)
         for i = 2:size(grid,1)-1
             n = count_neighbours(workarray, i, j)
@@ -60,9 +60,9 @@ grid = copy(glider_grid)
 grid[1,:] .= grid[end,:] .= 0
 grid[:,1] .= grid[:,end] .= 0
 
-# TODO2: grid non-concrete element type
+# TODO3: grid non-concrete element type
 grid = Matrix{Any}(grid)
-# TODO3: non-const global variables
+# TODO4: non-const global variables
 workarray = copy(grid)
 
 # using Plots
