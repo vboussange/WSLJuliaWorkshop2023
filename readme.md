@@ -112,7 +112,7 @@ The goal of this second-day workshop is to provide participants with an opportun
 ### Morning session 1
 
 - 🎤 💻 Geospatial data handling (@Mauro) **9:00-9:30**
-  - Rasters with Raster.jk
+  - Rasters with Raster.jl
   - shapefiles
   - Hands-on exercises
 
@@ -121,7 +121,7 @@ The goal of this second-day workshop is to provide participants with an opportun
   - Hands-on exercises
 
 
-- 🎤 💻 [Parallel computing](Day2/12_parallel_computing/parallel_computing.md) (@Victor) **10:00-10:30**
+- 🎤 💻 [Parallel computing](Day2/13_parallel_computing/parallel_computing.ipynb) (@Victor) **10:00-10:30**
   - Multithreading
   - Multiprocessing
   - Exercise: Parallelizing the code of life.
@@ -136,11 +136,11 @@ The goal of this second-day workshop is to provide participants with an opportun
 ### Morning session 2
 - 💻 Hands-on exercises **11:00-11:30**
 
-- 🎤 Interface with Python, R, MATLAB (@Victor) **11:30-12:00**
+- 🎤 [Interface with Python, R, MATLAB](Day2/21_interface/interface.ipynb) (@Victor) **11:30-12:00**
 
 - 🎤 Track Introductions (@Victor and @Mauro) **12:00-12:30**
-  - Biodiversity track
-  - Glaciology track
+  - [Biodiversity track](#biodiversity-track)
+  - [Glaciology track](#glaciology-track)
 
 
 ### Lunch
@@ -165,7 +165,7 @@ The goal of this second-day workshop is to provide participants with an opportun
 - [Deep learning-based Species Distribution Model](Projects/Victor/ml-based-SDM/DL-based-SDM_project.md)
 - [Constructing a benchmark of PiecewiseInference.jl against ApproxBayes.jl and Turing.jl]()
 
-- [Marine ecosystem time series modelling]()
+- [Time series modelling]()
 
 ## Glaciology track
 

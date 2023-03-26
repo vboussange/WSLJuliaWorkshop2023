@@ -41,7 +41,7 @@ Threads.@threads for i in 1:1000
 end
 println(length(a)) # !== 1000
 ```
-### `lock`
+#### `lock`
 
 The `lock` function can be used to prevent race condition
 ```julia

@@ -18,7 +18,7 @@ function count_neighbors(grid, idx)
             continue
         end
         idx_new = idx + n
-        if idx_new in axes(grid)
+        if (0 < idx_new[1] <= size(grid,1)) && (0 < idx_new[2] <= size(grid,2))
             count += grid[idx_new]
         end
     end
