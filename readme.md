@@ -162,11 +162,10 @@ The goal of this second-day workshop is to provide participants with an opportun
 # Projects
 ## Biodiversity track
 
-### Hyper parameter optimization of a machine learning-based SDM
+- [Deep learning-based Species Distribution Model](Projects/Victor/ml-based-SDM/DL-based-SDM_project.md)
+- [Constructing a benchmark of PiecewiseInference.jl against ApproxBayes.jl and Turing.jl]()
 
-### Constructing a benchmark of PiecewiseInference.jl against ApproxBayes.jl and Turing.jl
-
-### Marine ecosystem time series modelling
+- [Marine ecosystem time series modelling]()
 
 ## Glaciology track
 
