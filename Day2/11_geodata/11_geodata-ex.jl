@@ -173,6 +173,11 @@ md"""
 - mask the elevation map with the Gornergletscher outline and calculate the mean elevation
 """
 
+#nb # %% A slide [markdown] {"slideshow": {"slide_type": "slide"}}
+md"""
+# Exercise solution
+"""
+
 !isfile("data/sgi.zip") && Downloads.download("https://doi.glamos.ch/data/inventory/inventory_sgi2016_r2020.zip", "data/sgi.zip")
 zip = ZipFile.Reader("data/sgi.zip")
 for f in zip.files
@@ -182,13 +187,16 @@ for f in zip.files
     end
 end
 close(zip)
+#-
 
 using Shapefile
 sgi = Shapefile.Table("data/SGI_2016_glaciers.shp")
 ind = findfirst(skipmissing(sgi.name.=="Gornergletscher"))
 
 plot(sgi.geometry[ind])
+#-
 
+# load DHM again with the CRS (coord reference system) specifed
 ra = Raster("data/dhm200.asc", crs=EPSG(21781))
 
 ra_z = crop(ra; to = tab.geometry[zermatt])
@@ -199,10 +207,12 @@ mask_z = mask(ra_z, with = tab.geometry[zermatt])
 lv95 = EPSG(2056)
 ra_z_95 = resample(ra_z, 1, crs=lv95)
 
+#-
 mask_gor = mask(ra_z_95, with = sgi.geometry[ind])
 using Plots
 plot(mask_gor)
 
+#-
 # mean elevation, just count the not masked points (mask is -9999)
 using Statistics
 mean(mask_gor[mask_gor[:].>0])
