@@ -20,6 +20,14 @@ Slow code can be written in any language
 - before starting performance tuning, it's good to setup tests to make
   sure your code outputs the same
 
+## BenchmarkTools.jl
+
+Use the `$` trick with the `@btime` macro:
+
+```
+a = rand(5)
+@btime sin.($a)
+
 ## Julia resources
 
 First and foremost
