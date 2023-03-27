@@ -1,4 +1,6 @@
 [deps]
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Markdown = "d6f4376e-aef5-505a-96c1-9c027394607a"
 Metal = "dde4c033-4e86-420c-a63e-0dd931031962"
