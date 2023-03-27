@@ -111,12 +111,12 @@ The goal of this second-day workshop is to provide participants with an opportun
 
 ### Morning session 1
 
-- 🎤 💻 Geospatial data handling (@Mauro) **9:00-9:30**
+- 🎤 💻 [Geospatial data handling](Day2/11_geodata/11_geodata.ipynb) (@Mauro) **9:00-9:30**
   - Rasters with Raster.jl
   - shapefiles
   - Hands-on exercises
 
-- 🎤 💻 Performant Julia code and profiling (@Mauro) **9:30-10:00**
+- 🎤 💻 [Performant Julia code and profiling](Day2/12_performance/12_performance.md) (@Mauro) **9:30-10:00**
   - Introduction
   - Hands-on exercises
 
@@ -124,7 +124,7 @@ The goal of this second-day workshop is to provide participants with an opportun
 - 🎤 💻 [Parallel computing](Day2/13_parallel_computing/parallel_computing.ipynb) (@Victor) **10:00-10:30**
   - Multithreading
   - Multiprocessing
-  - [Exercise: Parallelizing the Game of life](Day2/13_parallel_computing/parallel_computing_exercise_with_sol.ipynb)
+  - [Exercise: Parallelizing the Game of Life](Day2/13_parallel_computing/parallel_computing_exercise_with_sol.ipynb)
 
 ### Coffee break
 **10:30-11:00**
