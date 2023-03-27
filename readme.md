@@ -156,9 +156,8 @@ The goal of this second-day workshop is to provide participants with an opportun
 ## Biodiversity track
 
 - [Deep learning-based Species Distribution Model](Projects/Victor/ml-based-SDM/DL-based-SDM_project.md)
-- [Constructing a benchmark of PiecewiseInference.jl against ApproxBayes.jl and Turing.jl]()
-
-- [Time series modelling]()
+- [Constructing a benchmark of PiecewiseInference.jl against ApproxBayes.jl and Turing.jl](/home/victorb/WSLJuliaWorkshop2023/Projects/Victor/PiecewiseInference-benchmark)
+- [Time series modelling](/home/victorb/WSLJuliaWorkshop2023/Projects/Victor/time-series-modelling)
 
 ## Glaciology track
 
