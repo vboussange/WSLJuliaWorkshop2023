@@ -124,11 +124,7 @@ The goal of this second-day workshop is to provide participants with an opportun
 - 🎤 💻 [Parallel computing](Day2/13_parallel_computing/parallel_computing.ipynb) (@Victor) **10:00-10:30**
   - Multithreading
   - Multiprocessing
-  - Exercise: Parallelizing the code of life.
-
-
-
-
+  - [Exercise: Parallelizing the Game of life](Day2/13_parallel_computing/parallel_computing_exercise_with_sol.ipynb)
 
 ### Coffee break
 **10:30-11:00**
