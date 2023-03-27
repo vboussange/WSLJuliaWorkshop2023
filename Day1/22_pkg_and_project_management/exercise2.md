@@ -44,7 +44,6 @@ my_project/
 > 
 > `pval = GLM.coeftable(model).cols[4][2]`
     
-> 
 - Create a unit test for `linear_regression` in `test/regression_functions.jl`
   - Use the `Test` module
 
