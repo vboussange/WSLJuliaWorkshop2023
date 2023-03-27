@@ -1,3 +1,9 @@
+### Get the packages
+
+````julia
+using Pkg; Pkg.instantiate()
+````
+
 # Geodata in Julia
 
 The geodata ecosystem in Julia has matured a lot, but is not in a fully stable state yet.
@@ -22,7 +28,6 @@ My stack:
 (a good tutorial https://github.com/xKDR/datascience-tutorials)
 
 First download some data:
-using Pkg; Pkg.instantiate()
 
 ````julia
 using Downloads # ships with Julia
@@ -97,7 +102,6 @@ Read it and select Zermatt (3920)
 ````julia
 using Shapefile
 tab = Shapefile.Table("data/PLZO_PLZ.shp")
-shp = Shapefile.shapes(tab)
 
 zermatt = findfirst(tab.PLZ.==3920)
 plot(tab.geometry[zermatt])
@@ -110,6 +114,16 @@ Shapefiles contain tables of attributes which can be handled with DataFrames, if
 ````julia
 using DataFrames
 DataFrame(tab)
+````
+
+### Shapefiles polygons
+
+Shapefiles contain polygons, the can be accessed with:
+
+````julia
+shp = Shapefile.shapes(tab)
+poly = shp[1]
+Rasters.GeoInterface.coordinates.(poly.points) # points in a vector
 ````
 
 ### Crop and mask raster

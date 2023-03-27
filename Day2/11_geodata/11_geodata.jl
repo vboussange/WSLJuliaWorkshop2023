@@ -3,6 +3,12 @@ using Markdown #src
 
 #nb # %% A slide [markdown] {"slideshow": {"slide_type": "slide"}}
 md"""
+### Get the packages
+"""
+using Pkg; Pkg.instantiate()
+
+#nb # %% A slide [markdown] {"slideshow": {"slide_type": "slide"}}
+md"""
 # Geodata in Julia
 
 The geodata ecosystem in Julia has matured a lot, but is not in a fully stable state yet.
@@ -38,8 +44,6 @@ md"""
 
 First download some data:
 """
-# using Pkg; Pkg.instantiate()
-
 using Downloads # ships with Julia
 using Rasters, ZipFile
 mkpath("data")
