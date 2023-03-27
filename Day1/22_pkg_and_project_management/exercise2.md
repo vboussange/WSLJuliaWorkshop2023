@@ -45,15 +45,21 @@ my_project/
 > `pval = GLM.coeftable(model).cols[4][2]`
     
 > 
-- Create a unit test for `linear_regression` in `tests/regression_functions.jl`
+- Create a unit test for `linear_regression` in `test/regression_functions.jl`
   - Use the `Test` module
 
-- In `my-analysis.jl` file, write a Julia script that loops through the CSV files and runs for each a linear regression using `linear_regression`. The script should and save the results in a `DataFrame` which should look like 
-```julia
-df_results = DataFrame(species_name = [], slope = [], pval = [])
-```
-  - Make sure to print some logging information
-  - Output the CSV in the result folder
+- In `my-analysis.jl` file, write a Julia script that
+  - loads the necessary packages
+  - loads the functions in `src/regression_functions.jl` 
+  - creates an empty `DataFrame`
+    - ```julia
+      df_results = DataFrame(species_name = [], slope = [], pval = [])
+      ```
+  - loops through the CSV files, runs for each a linear regression using `linear_regression`, and pushes the results to the `DataFrame`
+    - Make sure to print some logging information, e.g. `println("processing ", csv_filename)`
+  - exports the dataframe as a CSV file in the result folder
+
+- Use a shell script to run `my-analysis.jl`
 
 ## Solutions
-You may find the solutions in the `Day1/23_practical-guidelines/my_project` folder.
+You may find the solutions in the `Day1/23_practical-guidelines/my_project_solutions` folder.

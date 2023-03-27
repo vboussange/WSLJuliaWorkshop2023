@@ -57,8 +57,8 @@ know where that is)
 
 - Package and project management (@Victor) **11:15-11:45**
   - 💻🎤 [Introduction to `Pkg.jl`](Day1/22_pkg_and_project_management/Pkg.ipynb)
-  - 💻[Exercise 1: activate an environment and run the associated script](Day1/22_pkg_and_project_management/exercise1.md)
-  - 💻[Exercise 2: Part 1](Day1/22_pkg_and_project_management/exercise2.md): Set-up the environment of your project
+  - 💻[Exercise: activate an environment and run the associated script](Day1/22_pkg_and_project_management/exercise1.md)
+  - 💻[Exercise: Develop your first Julia project - Part 1](Day1/22_pkg_and_project_management/exercise2.md)
 
 - 💻🎤 [VS code workflow and remote development](Day1/23_vscode_remote_dev/vs_code_workflow.ipynb) (@Victor) **11:45-12:30**
   - VSCode editor
@@ -127,7 +127,7 @@ The goal of this second-day workshop is to provide participants with an opportun
 
 ### Morning session 2
 - 💻🎤[Julia projects managements](Day1/22_pkg_and_project_management/practical_guideline.ipynb) **11:00-11:30**
-  - 💻[Exercise 2: Part 2.](Day1/22_pkg_and_project_management/exercise2.md) Develop your first Julia project
+  - 💻[Exercise: Develop your first Julia project - Part 2](Day1/22_pkg_and_project_management/exercise2.md) 
 
 - 🎤 [Interface with Python, R, MATLAB](Day2/21_interface/interface.ipynb) (@Victor) **11:30-12:00**
 
