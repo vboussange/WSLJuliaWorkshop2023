@@ -74,6 +74,8 @@ Rasters have powerful (but also complicated) indexing capabilities.
 
 See https://rafaqz.github.io/Rasters.jl/stable/
 """
+ra[5,6] # index the underlying matrix normally
+
 ra[X(Near(600000)), Y(Near(250876))]     # shows where the x-y are
 #-
 ra[X(Near(600000)), Y(Near(250876))][1]  # index with the [1] to get the value out
@@ -89,8 +91,16 @@ resample, mosaic, crop...
 See the [docs](https://rafaqz.github.io/Rasters.jl/stable/#Methods-that-change-the-reslolution-or-extent-of-an-object)
 """
 
+#nb # %% A slide [markdown] {"slideshow": {"slide_type": "slide"}}
+md"""
+### Rasters can be used like normal arrays
 
-
+Example play game of life.
+"""
+grid = ra .> 1000 # all cells above 1000m a.s.l. are alive
+include("game-of-life.jl") # load the file with the GOL functions
+for i=1:5; update_grid!(grid) end # run 5 iterations
+plot(grid)  # note that grid is still a Raster
 
 
 #nb # %% A slide [markdown] {"slideshow": {"slide_type": "slide"}}
