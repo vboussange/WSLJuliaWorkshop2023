@@ -146,19 +146,14 @@ The goal of this second-day workshop is to provide participants with an opportun
 ## Biodiversity track
 
 - [Deep learning-based Species Distribution Model](Projects/Victor/ml-based-SDM/DL-based-SDM_project.md)
-- [Constructing a benchmark of PiecewiseInference.jl against ApproxBayes.jl and Turing.jl](/home/victorb/WSLJuliaWorkshop2023/Projects/Victor/PiecewiseInference-benchmark)
-- [Time series modelling](/home/victorb/WSLJuliaWorkshop2023/Projects/Victor/time-series-modelling)
+- [Constructing a benchmark of PiecewiseInference.jl against ApproxBayes.jl and Turing.jl](Projects/Victor/PiecewiseInference-benchmark/PiecewiseInference-benchmark.md)
+- [Time series modelling](Projects/Victor/time-series-modelling/time-series-modelling.md)
 
 ## Glaciology track
 
-- Shallow ice model in 1D
-  - Time scales, hysteresis. Real topo.
+- [Subglacial water routing](Projects/Mauro/Flow-routing/flow-routing.md)
 
-- Subglacial water routing
-  - Yesterday and today (Fischer paper)?
-
-- Ice thickness estimation
-  - PoG exercise
+- [Ice thickness estimation](Projects/Mauro/IceThickness/u2-julia.ipynb)
 
 # Additional resources
 - [Julia official list of tutorials](https://julialang.org/learning/tutorials/)
@@ -167,10 +162,10 @@ The goal of this second-day workshop is to provide participants with an opportun
 - [Julia Workshop for Data Science](https://crsl4.github.io/julia-workshop/session1-get-started.html)
 # Acknowledgments
 
-The workshop materials are based on the following resources:
+The workshop materials are based on numerous resources, which have been indicated in the different sections.
 
-- [List of references or sources of inspiration]
+We thank [WSL Biodiversity center](https://www.wsl.ch/en/about-wsl/organisation/programmes-and-initiatives/wsl-biodiversity-center.html), the [Ecosystem and Landscape Evolution](https://ele.ethz.ch) and [The Laboratory of Hydraulics, Hydrology and Glaciology](https://vaw.ethz.ch/en/) for supporting and funding this workshop.
 
 # Contact
 
-If you have any questions or feedback, feel free to contact the contributors @vboussange and @mauro3.
+If you have any questions or feedback, feel free to contact the main authors of this workshop, @vboussange and @mauro3. You can also create a pull request.
