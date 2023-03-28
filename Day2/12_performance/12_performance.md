@@ -24,22 +24,22 @@ Slow code can be written in any language
 
 Use the `$` trick with the `@btime` macro:
 
-```
+```julia
 a = rand(5)
 @btime sin.($a)
+```
 
 ## Julia resources
 
-First and foremost
-https://docs.julialang.org/en/v1/manual/performance-tips/
+- First and foremost: [Performance Tips in the Julia documentation](https://docs.julialang.org/en/v1/manual/performance-tips/)
 
-Dirty trick: go on https://discourse.julialang.org/ and state that you
+- Dirty trick: go on [Julia Discourse](https://discourse.julialang.org/) and state that you
 ported code from Matlab/Python/R to Julia and it's now slower... (do
 use resources of other people very sparingly!)
 
 ## Exercise
 
-Take you Game of Life code and improve its performance.
+Take your Game of Life code and improve its performance.
 
 If you did not code a solution, take the one
-[here](https://github.com/vboussange/WSLJuliaWorkshop2023/blob/5f9752090f06e43c5294e6513710b6d6dd46c400/Day1/42_game_of_life/42_game_of_life_solution.md)
+[here](../../Day1/42_game_of_life/42_game_of_life_solution.md)

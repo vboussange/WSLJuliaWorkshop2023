@@ -1,6 +1,6 @@
 # Practical introduction to Julia for modelling and data analysis in biodiversity and earth sciences
 
-This repository contains materials for the [WSL Julia Workshop 2023](https://www.wsl.ch/de/ueber-die-wsl/die-wsl-im-dialog/details/practical-introduction-to-julia-for-modelling-and-data-analysis-in-biodiversity-and-earth-sciences.html) **Practical introduction to Julia for modelling and data analysis in biodiversity and earth sciences**, held on the 24th and 27th of March 2023 at WSL Birmensdorf.
+This repository contains materials for the [WSL Julia Workshop 2023](https://www.wsl.ch/de/ueber-die-wsl/die-wsl-im-dialog/details/practical-introduction-to-julia-for-modelling-and-data-analysis-in-biodiversity-and-earth-sciences.html) **Practical introduction to Julia for modelling and data analysis in biodiversity and earth sciences**, held on the 24th and 27th of March 2023 at WSL Birmensdorf. It should contain useful resources and guidelines to curious ecologists and glaciologists who want to get an overview or get started with the Julia language. It also contains ideas of [research projects](#projects) related to biodiversity and earth sciences, to be conducted with Julia.
 
 # Content
 
@@ -41,12 +41,11 @@ know where that is)
 ### Morning session 1
 **9:00 - 10:30**
 
-- 🎤 Greetings to the Workshop (@Mauro and @Victor) **9:00-9:10**
-- 🎤 Overview of the Julia programming language (@Mauro) **9:10-9:30**
-- 🎤💻 [**Practical**: your first lines of Julia code](Day1/13_julia-practical-on-jupyter/output) (@Mauro) **9:30-10:30**
-  - **Practical** Basic syntax and data types
-  - **Practical** Control flow and conditional statements
-> Pick up any format you like best among the `.ipynb`, `.md` and `.jl` files. Their content is the same!
+- 🎤 [Greetings to the Workshop](Day1/11_welcome.ipynb) (@Mauro and @Victor) **9:00-9:10**
+- 🎤 [Overview of the Julia programming language](Day1/12_julia-overview/12_julia-overview.pdf) (@Mauro) **9:10-9:30**
+- 🎤💻 [**Practical**: your first lines of Julia code](Day1/13_julia-practical-on-jupyter/output/13_julia-practical-on-jupyter.ipynb) (@Mauro) **9:30-10:30**
+  - Basic syntax and data types
+  - Control flow and conditional statements
 
 ### Coffee break
 **10:30 - 11:00**
@@ -64,17 +63,13 @@ know where that is)
   - VSCode editor
   - Remote development
 
-- 💻 Additional exercises
-
 ### Lunch
 **12:30 - 13:30**
 
 ### Afternoon session 3
 **13:30 - 15:00**
 
-- 🎤 **Talk** Overview of the ecosystem (@Mauro) **13:30-13:45**
-  - the Julia discourse,
-  - the packages we like best,
+- 🎤 [Overview of the ecosystem](Day1/31_julia_ecosystem/31_julia_ecosystem.ipynb) (@Mauro) **13:30-13:45**
 
 - 🎤 💻 [`DataFrames`, broadcasting, loading CSV](Day1/32_dataframe_tuto/32_dataframe_tuto.ipynb) (@Victor) **13:45-14:05**
 
@@ -82,7 +77,7 @@ know where that is)
 - 💻 [Hands-on exercises](Day1/32_dataframe_tuto/33_dataframe_exercises.md) **14:05-14:30**
 
 
-- 🎤 💻 Plotting and visualisation (@Mauro) **14:30-14:45**
+- 🎤 💻 [Plotting and visualisation](Day1/33_plotting/33_plotting.ipynb) (@Mauro) **14:30-14:45**
 
 - 💻 [Hands-on exercises continued](Day1/32_dataframe_tuto/33_dataframe_exercises.md) **14:45-15:00**
 
@@ -91,11 +86,8 @@ know where that is)
 
 ### Afternoon session 4
 - 🎤 [Why I like Julia](https://github.com/luraess/WSLJulia2023) (@Ludovic) **15:30-15:40**
-- 🎤 💻 Saving and loading data in Julia (Mauro) **-15:40-15:55**
-- 💻 Hands-on exercises **15:55-17:00**
-  - [Coding the game of life](Day1/42_game_of_life/42_game_of_life.md)
-  - Continuing previous exercises
-
+- 🎤 💻 [Saving and loading data in Julia]() (@Mauro) **-15:40-15:55**
+- 💻 [Coding the game of life](Day1/42_game_of_life/42_game_of_life.md) **15:55-17:00**
 
 
 ### 🍻 Apéro
@@ -108,9 +100,7 @@ The goal of this second-day workshop is to provide participants with an opportun
 ### Morning session 1
 
 - 🎤 💻 [Geospatial data handling](Day2/11_geodata/11_geodata.ipynb) (@Mauro) **9:00-9:30**
-  - Rasters with Raster.jl
-  - shapefiles
-  - Hands-on exercises
+  - [Hands-on exercises](Day2/11_geodata/11_geodata-ex.ipynb)
 
 - 🎤 💻 [Performant Julia code and profiling](Day2/12_performance/12_performance.md) (@Mauro) **9:30-10:00**
   - Introduction
@@ -172,9 +162,9 @@ The goal of this second-day workshop is to provide participants with an opportun
 
 # Additional resources
 - [Julia official list of tutorials](https://julialang.org/learning/tutorials/)
-- https://github.com/storopoli/Julia-Workshop, https://www.youtube.com/watch?v=uiQpwMQZBTA, 3 hours
-- https://www.matecdev.com/posts/julia-tutorial-science-engineering.html
-- https://crsl4.github.io/julia-workshop/session1-get-started.html
+- [Introduction to Julia, JuliaCon 2022](https://github.com/storopoli/Julia-Workshop), and the [YouTube video](https://www.youtube.com/watch?v=uiQpwMQZBTA) (3 hours)
+- [Introductory Julia tutorial by Martin D. Maas](https://www.matecdev.com/posts/julia-tutorial-science-engineering.html)
+- [Julia Workshop for Data Science](https://crsl4.github.io/julia-workshop/session1-get-started.html)
 # Acknowledgments
 
 The workshop materials are based on the following resources:

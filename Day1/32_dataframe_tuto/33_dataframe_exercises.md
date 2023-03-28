@@ -88,8 +88,8 @@ Normalize the `decimalLongitude` and `decimalLatitude`, so that it scales betwee
 
 For this, construct a function `normalize`, that takes in a vector of floating points and a new normalized vector. This function should use the `.` operator.
 
+> 🥳 Congrats! You are done with this session of exercises.
+## Solutions
 
+You may find solutions to these exercises [here](/Users/victorboussange/ETHZ/PostDoc_ELE/teaching/WSL_workshop_Julia/material/Day1/32_dataframe_tuto/33_dataframe_exercises_with_sols.jmd).
 
-
-
-# 🥳 Congrats! You are done with this session of exercises.
